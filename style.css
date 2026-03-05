@@ -700,4 +700,22 @@ ul {
     .mobile-schedule {
         display: flex !important;
     }
+
+    .mobile-sticky-cta {
+        display: block !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--color-bg);
+        padding: 1rem 1.5rem;
+        border-top: var(--border-thick);
+        box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    /* Ensure footer doesn't get hidden behind the sticky CTA */
+    body {
+        padding-bottom: 120px;
+    }
 }
