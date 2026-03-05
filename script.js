@@ -27,19 +27,19 @@ document.addEventListener("DOMContentLoaded", () => {
   if (signupForm) {
     signupForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      
+
       const btn = signupForm.querySelector("button[type='submit']");
       const originalText = btn.textContent;
-      
+
       btn.textContent = "REGISTERING...";
       btn.classList.remove("btn-primary");
       btn.classList.add("btn-dark");
-      
+
       // Simulate API call
       setTimeout(() => {
         btn.textContent = "SUCCESS!";
         btn.style.backgroundColor = "#10b981"; // success green
-        
+
         setTimeout(() => {
           btn.textContent = originalText;
           btn.classList.add("btn-primary");
@@ -50,4 +50,28 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 1500);
     });
   }
+
+  // FAQ Accordion Interactivity
+  const faqQuestions = document.querySelectorAll('.faq-question');
+
+  faqQuestions.forEach(button => {
+    button.addEventListener('click', () => {
+      const answer = button.nextElementSibling;
+      const icon = button.querySelector('span:last-child');
+
+      // Toggle current answer
+      if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+        icon.textContent = '+';
+      } else {
+        // Close all other answers
+        document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
+        document.querySelectorAll('.faq-question span:last-child').forEach(icn => icn.textContent = '+');
+
+        // Open clicked answer
+        answer.style.display = 'block';
+        icon.textContent = '−';
+      }
+    });
+  });
 });

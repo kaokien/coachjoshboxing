@@ -42,15 +42,70 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero d-flex-mobile"
+            style="min-height: 85vh; display: flex; align-items: center; border-bottom: var(--border-thick);">
+            <div class="container" style="display: flex; flex-direction: column; gap: 4rem; align-items: center;">
+                <div class="hero-content" style="flex: 1; z-index: 10; text-align: center;">
+                    <h1 class="hero-title"
+                        style="font-size: clamp(3.2rem, 8vw, 6rem); margin-bottom: 1.5rem; text-transform: uppercase;">
+                        Build Elite Confidence. Get in the Best Shape of Your Life in <span class="highlight">7
+                            Days</span>.
+                    </h1>
+                    <p class="hero-subtitle"
+                        style="font-size: 1.25rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                        Zero experience required. World-class conditioning, technique, and discipline without the
+                        intimidation.
+                    </p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                        <a href="https://bashtas-martial-arts.gymdesk.com/signup" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-primary"
+                            style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                            START MY FREE WEEK
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                        <a href="#schedule" class="btn btn-secondary">VIEW SCHEDULE</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Banner (Social Proof) -->
+        <section class="stats-banner"
+            style="background-color: var(--color-white); border-bottom: var(--border-thick); padding: 2.5rem 0;">
             <div class="container">
-                <h1 class="hero-title">TRAIN IN PERSON</h1>
-                <h2 class="hero-subtitle">COACH JOSH BOXING</h2>
-                <p class="hero-description">Experience elite boxing training at Bashta's Gym. Focus on technique, build
-                    power, and get in the best shape of your life with structured, intense coaching.</p>
-                <div class="hero-actions">
-                    <a href="#signup" class="btn btn-primary">Claim 7 Day Free Trial</a>
-                    <a href="#video" class="btn">See Real Results</a>
+                <div
+                    style="display: flex; justify-content: space-around; align-items: center; gap: 2rem; text-align: center; flex-wrap: wrap;">
+                    <div class="stat-item">
+                        <div
+                            style="font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900; line-height: 1;">
+                            100M+</div>
+                        <div
+                            style="font-weight: 800; color: #64748b; letter-spacing: 0.1em; font-size: 0.95rem; margin-top: 0.5rem;">
+                            VIEWS</div>
+                    </div>
+                    <div class="stat-divider d-none-mobile"
+                        style="width: 2px; height: 60px; background-color: #cbd5e1;"></div>
+                    <div class="stat-item">
+                        <div
+                            style="font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900; line-height: 1;">
+                            6+</div>
+                        <div
+                            style="font-weight: 800; color: #64748b; letter-spacing: 0.1em; font-size: 0.95rem; margin-top: 0.5rem;">
+                            YEARS</div>
+                    </div>
+                    <div class="stat-divider d-none-mobile"
+                        style="width: 2px; height: 60px; background-color: #cbd5e1;"></div>
+                    <div class="stat-item">
+                        <div
+                            style="font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900; line-height: 1;">
+                            200+</div>
+                        <div
+                            style="font-weight: 800; color: #64748b; letter-spacing: 0.1em; font-size: 0.95rem; margin-top: 0.5rem;">
+                            ATHLETES</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -108,243 +163,287 @@
                 <div class="features-grid">
                     <div class="feature-card">
                         <span class="feature-icon">🥊</span>
-                        <h3 class="feature-title brand-text">REAL TECHNIQUE</h3>
-                        <p>This isn't just a cardio workout. You will learn the actual fundamentals of boxing, from
-                            proper stance and footwork to high-level defense and striking mechanics.</p>
+                        <h3 class="feature-title brand-text">REAL MECHANICS</h3>
+                        <p>Stop doing cardio kickboxing. Learn true striking, footwork, and defense from a coach who
+                            respects the sport.</p>
                     </div>
                     <div class="feature-card">
                         <span class="feature-icon">🏟️</span>
-                        <h3 class="feature-title brand-text">PREMIUM FACILITY</h3>
-                        <p>Located at the renowned Bashta's Gym, our classes take place in a fully equipped space
-                            designed for serious martial artists and beginners alike.</p>
+                        <h3 class="feature-title brand-text">LEAVE YOUR EGO OUTSIDE</h3>
+                        <p>Zero intimidation policy. Whether you're a day-one beginner or returning athlete, we scale
+                            the intensity to you.</p>
                     </div>
                     <div class="feature-card">
                         <span class="feature-icon">🔥</span>
-                        <h3 class="feature-title brand-text">INTENSE CONDITIONING</h3>
-                        <p>Build elite stamina, explosive power, and mental toughness through routines used by
-                            professional fighters.</p>
+                        <h3 class="feature-title brand-text">ELITE CONDITIONING</h3>
+                        <p>Burn absolute maximum calories. Build relentless stamina and mental toughness you carry out
+                            of the gym.</p>
                     </div>
                     <div class="feature-card">
                         <span class="feature-icon">🤝</span>
-                        <h3 class="feature-title brand-text">ALL LEVELS WELCOME</h3>
-                        <p>Whether you have zero experience or want to refine your skills for competition, our
-                            <!-- About Section -->
-                        <section id="about" class="about"
-                            style="padding: 6rem 0; background-color: var(--color-dark); color: var(--color-white); border-top: var(--border-thick); border-bottom: var(--border-thick);">
-                            <div class="container">
-                                <div class="about-container"
-                                    style="display: flex; flex-direction: column; gap: 4rem; align-items: center; max-width: 1000px; margin: 0 auto;">
-                                    <div
-                                        style="flex: 1; min-width: 300px; border: var(--border-thick); box-shadow: 8px 8px 0px 0px var(--color-white); background-color: var(--color-bg); overflow: hidden; aspect-ratio: 3/4; position: relative;">
-                                        <img src="coach-josh.webp" alt="Coach Josh"
-                                            style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
-                                    </div>
-                                    <div style="flex: 1; text-align: left;">
-                                        <h2 class="section-title" style="margin-bottom: 1.5rem; text-align: left;">MEET
-                                            THE COACH</h2>
-                                        <p
-                                            style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 1.5rem; opacity: 0.9;">
-                                            I am dedicated to helping you achieve your ultimate potential through the
-                                            art of boxing. With years of experience in the ring and coaching fighters of
-                                            all levels, my approach is built on discipline, technique, and relentless
-                                            conditioning.
-                                        </p>
-                                        <p
-                                            style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 2rem; opacity: 0.9;">
-                                            Whether you are stepping into the gym for the first time looking to get in
-                                            shape, or you are an experienced boxer refining your skills, the training
-                                            programs here at Bashta's are designed to push you beyond your limits and
-                                            build real confidence.
-                                        </p>
-                                        <div
-                                            style="display: flex; align-items: center; gap: 1rem; border-left: 4px solid var(--color-blue); padding-left: 1.5rem;">
-                                            <span
-                                                style="font-family: var(--font-display); font-weight: 900; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Real
-                                                Boxing. Real Results.</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
+                        <h3 class="feature-title brand-text">PROVEN TRANSFORMATIONS</h3>
+                        <p>Join over 200+ individuals who stepped into Bashta's Gym to drop weight, build confidence,
+                            and change their routines.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section id="about" class="about"
+            style="padding: 6rem 0; background-color: var(--color-dark); color: var(--color-white); border-top: var(--border-thick); border-bottom: var(--border-thick);">
+            <div class="container">
+                <div class="about-container"
+                    style="display: flex; flex-direction: column; gap: 4rem; align-items: center; max-width: 1000px; margin: 0 auto;">
+                    <div
+                        style="flex: 1; min-width: 300px; border: var(--border-thick); box-shadow: 8px 8px 0px 0px var(--color-white); background-color: var(--color-bg); overflow: hidden; aspect-ratio: 3/4; position: relative;">
+                        <img src="coach-josh.webp" alt="Coach Josh"
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+                    </div>
+                    <div style="flex: 1; text-align: left;">
+                        <h2 class="section-title" style="margin-bottom: 1.5rem; text-align: left;">MEET
+                            THE COACH</h2>
+                        <p style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 1.5rem; opacity: 0.9;">
+                            I don't just teach the art of boxing—I use it as the ultimate tool for total-body wellness,
+                            conditioning, and elite confidence.
+                        </p>
+                        <p style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 2rem; opacity: 0.9;">
+                            Over the last 6+ years, I have had the privilege of training over <strong>200+
+                                individuals</strong>, helping them shatter their fitness goals. Whether you are stepping
+                            into the gym for the first time or refining your skills, the programs here at Bashta's are
+                            designed to meet you where you are and push you beyond your limits.
+                        </p>
+                        <div
+                            style="display: flex; align-items: center; gap: 1rem; border-left: 4px solid var(--color-blue); padding-left: 1.5rem;">
+                            <span
+                                style="font-family: var(--font-display); font-weight: 900; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Real
+                                Boxing. Real Results.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                        <!-- Schedule & Location -->
-                        <section id="schedule" class="schedule bg-bg" style="padding: 6rem 0;">
-                            <div class="container">
-                                <div class="section-header">
-                                    <h2 class="section-title">TRAINING SCHEDULE</h2>
-                                    <p>Find a class time that works for you.</p>
-                                </div>
+        <!-- Schedule & Location -->
+        <section id="schedule" class="schedule bg-bg" style="padding: 6rem 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">TRAINING SCHEDULE</h2>
+                    <p>Find a class time that works for you.</p>
+                </div>
 
-                                <div class="schedule-matrix-container">
-                                    <table class="schedule-matrix">
-                                        <thead>
-                                            <tr>
-                                                <th class="time-col">TIME</th>
-                                                <th>MON</th>
-                                                <th>TUE</th>
-                                                <th>WED</th>
-                                                <th>THU</th>
-                                                <th>FRI</th>
-                                                <th>SAT</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="time-col">10 AM - 12 PM</td>
-                                                <td><span class="empty-dash">-</span></td>
-                                                <td><span class="empty-dash">-</span></td>
-                                                <td><span class="empty-dash">-</span></td>
-                                                <td><span class="empty-dash">-</span></td>
-                                                <td><span class="empty-dash">-</span></td>
-                                                <td><span class="matrix-tag open">OPEN GYM</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="time-col">5 PM - 6 PM</td>
-                                                <td><span class="matrix-tag kids">KIDS CLASS</span></td>
-                                                <td><span class="empty-dash">-</span></td>
-                                                <td><span class="matrix-tag kids">KIDS CLASS</span></td>
-                                                <td><span class="empty-dash">-</span></td>
-                                                <td><span class="matrix-tag kids">KIDS CLASS</span></td>
-                                                <td><span class="empty-dash">-</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="time-col">6 PM - 7 PM</td>
-                                                <td><span class="empty-dash">-</span></td>
-                                                <td><span class="empty-dash">-</span></td>
-                                                <td><span class="empty-dash">-</span></td>
-                                                <td><span class="empty-dash">-</span></td>
-                                                <td><span class="matrix-tag womens">WOMEN'S ONLY</span></td>
-                                                <td><span class="empty-dash">-</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="time-col">7:30 PM - 9 PM</td>
-                                                <td><span class="matrix-tag adults">ADULTS & TEENS</span></td>
-                                                <td><span class="matrix-tag adults">ADULTS & TEENS</span></td>
-                                                <td><span class="matrix-tag adults">ADULTS & TEENS</span></td>
-                                                <td><span class="matrix-tag adults">ADULTS & TEENS</span></td>
-                                                <td><span class="matrix-tag adults">ADULTS & TEENS</span></td>
-                                                <td><span class="empty-dash">-</span></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                <div class="schedule-matrix-container">
+                    <table class="schedule-matrix">
+                        <thead>
+                            <tr>
+                                <th class="time-col">TIME</th>
+                                <th>MON</th>
+                                <th>TUE</th>
+                                <th>WED</th>
+                                <th>THU</th>
+                                <th>FRI</th>
+                                <th>SAT</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="time-col">10 AM - 12 PM</td>
+                                <td data-day="MON"><span class="empty-dash">-</span></td>
+                                <td data-day="TUE"><span class="empty-dash">-</span></td>
+                                <td data-day="WED"><span class="empty-dash">-</span></td>
+                                <td data-day="THU"><span class="empty-dash">-</span></td>
+                                <td data-day="FRI"><span class="empty-dash">-</span></td>
+                                <td data-day="SAT"><span class="matrix-tag open">OPEN GYM</span></td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">5 PM - 6 PM</td>
+                                <td data-day="MON"><span class="matrix-tag kids">KIDS CLASS</span></td>
+                                <td data-day="TUE"><span class="empty-dash">-</span></td>
+                                <td data-day="WED"><span class="matrix-tag kids">KIDS CLASS</span></td>
+                                <td data-day="THU"><span class="empty-dash">-</span></td>
+                                <td data-day="FRI"><span class="matrix-tag kids">KIDS CLASS</span></td>
+                                <td data-day="SAT"><span class="empty-dash">-</span></td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">6 PM - 7 PM</td>
+                                <td data-day="MON"><span class="empty-dash">-</span></td>
+                                <td data-day="TUE"><span class="empty-dash">-</span></td>
+                                <td data-day="WED"><span class="empty-dash">-</span></td>
+                                <td data-day="THU"><span class="empty-dash">-</span></td>
+                                <td data-day="FRI"><span class="matrix-tag womens">WOMEN'S ONLY</span></td>
+                                <td data-day="SAT"><span class="empty-dash">-</span></td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">7:30 PM - 9 PM</td>
+                                <td data-day="MON"><span class="matrix-tag adults">ADULTS & TEENS</span></td>
+                                <td data-day="TUE"><span class="matrix-tag adults">ADULTS & TEENS</span></td>
+                                <td data-day="WED"><span class="matrix-tag adults">ADULTS & TEENS</span></td>
+                                <td data-day="THU"><span class="matrix-tag adults">ADULTS & TEENS</span></td>
+                                <td data-day="FRI"><span class="matrix-tag adults">ADULTS & TEENS</span></td>
+                                <td data-day="SAT"><span class="empty-dash">-</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                                    <div class="schedule-legend">
-                                        <div class="legend-item"><span class="matrix-tag adults legend-tag"></span>
-                                            Adults & Teens</div>
-                                        <div class="legend-item"><span class="matrix-tag kids legend-tag"></span> Kids
-                                            Class</div>
-                                        <div class="legend-item"><span class="matrix-tag womens legend-tag"></span>
-                                            Women's Only</div>
-                                        <div class="legend-item"><span class="matrix-tag open legend-tag"></span> Open
-                                            Gym</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
+                    <div class="schedule-legend">
+                        <div class="legend-item"><span class="matrix-tag adults legend-tag"></span>
+                            Adults & Teens</div>
+                        <div class="legend-item"><span class="matrix-tag kids legend-tag"></span> Kids
+                            Class</div>
+                        <div class="legend-item"><span class="matrix-tag womens legend-tag"></span>
+                            Women's Only</div>
+                        <div class="legend-item"><span class="matrix-tag open legend-tag"></span> Open
+                            Gym</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                        <!-- Final CTA (Funnel Signup) -->
-                        <section id="signup" class="cta-section">
-                            <div class="container">
-                                <h2 class="cta-title">CLAIM YOUR 7 DAY FREE TRIAL</h2>
-                                <p class="cta-subtitle">Start your journey at Bashta's Gym today. No commitment required
-                                    for the first week.</p>
-                                <div style="margin: 3rem auto; max-width: 700px; padding: 0 1rem;">
-                                    <a href="https://bashtas-martial-arts.gymdesk.com/signup" target="_blank"
-                                        rel="noopener noreferrer" class="btn-gymdesk">
-                                        <svg class="btn-gymdesk-icon" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <path d="m14.4 14.4-8.8-8.8" />
-                                            <path d="m6.3 5.6-2.1 2.1" />
-                                            <path d="m4.2 7.7 2.1 2.1" />
-                                            <path d="m2.1 9.8 2.1 2.1" />
-                                            <path d="m20.5 14.1-2.1 2.1" />
-                                            <path d="m18.4 16.2 2.1 2.1" />
-                                            <path d="m16.3 18.3 2.1 2.1" />
-                                            <path d="M8.4 4.2 4.2 8.4" />
-                                            <path d="M19.8 15.6l-4.2-4.2" />
-                                        </svg>
-                                        <span class="btn-gymdesk-text">SIGN UP FOR IN-PERSON CLASSES</span>
-                                        <svg class="btn-gymdesk-arrow" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                                            <polyline points="7 7 17 7 17 17"></polyline>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </section>
+        <!-- Final CTA (Funnel Signup) -->
+        <section id="signup" class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">CLAIM YOUR 7 DAY FREE TRIAL</h2>
+                <p class="cta-subtitle">Start your journey at Bashta's Gym today. No commitment required
+                    for the first week.</p>
+                <div style="margin: 3rem auto; max-width: 700px; padding: 0 1rem;">
+                    <a href="https://bashtas-martial-arts.gymdesk.com/signup" target="_blank" rel="noopener noreferrer"
+                        class="btn-gymdesk">
+                        <svg class="btn-gymdesk-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m14.4 14.4-8.8-8.8" />
+                            <path d="m6.3 5.6-2.1 2.1" />
+                            <path d="m4.2 7.7 2.1 2.1" />
+                            <path d="m2.1 9.8 2.1 2.1" />
+                            <path d="m20.5 14.1-2.1 2.1" />
+                            <path d="m18.4 16.2 2.1 2.1" />
+                            <path d="m16.3 18.3 2.1 2.1" />
+                            <path d="M8.4 4.2 4.2 8.4" />
+                            <path d="M19.8 15.6l-4.2-4.2" />
+                        </svg>
+                        <span class="btn-gymdesk-text">SIGN UP FOR IN-PERSON CLASSES</span>
+                        <svg class="btn-gymdesk-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-                        <!-- Footer -->
-                        <footer class="footer">
-                            <div class="container">
-                                <h2 class="brand-text" style="font-size: 2rem; margin-bottom: 2rem;">COACH JOSH BOXING
-                                </h2>
-                                <div class="footer-grid d-none-mobile"
-                                    style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 800px; margin: 0 auto 3rem; text-align: center;">
-                                    <div>
-                                        <h3
-                                            style="font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; margin-bottom: 0.5rem; text-transform: uppercase;">
-                                            Call Us</h3>
-                                        <p class="footer-text" style="font-size: 1rem; color: var(--color-dark);"><a
-                                                href="tel:203215480">203-215-4800</a></p>
-                                    </div>
-                                    <div>
-                                        <h3
-                                            style="font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; margin-bottom: 0.5rem; text-transform: uppercase;">
-                                            Visit Us</h3>
-                                        <p class="footer-text" style="font-size: 1rem; color: var(--color-dark);">
-                                            Located inside Bashta's Gym<br>55 Connolly Parkway<br>Hamden, CT 06514</p>
-                                    </div>
-                                    <div>
-                                        <h3
-                                            style="font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; margin-bottom: 0.5rem; text-transform: uppercase;">
-                                            Email Us</h3>
-                                        <p class="footer-text" style="font-size: 1rem; color: var(--color-dark);"><a
-                                                href="mailto:coachjoshofficial@playersclubllc.com"
-                                                style="word-break: break-all;">coachjoshofficial<br>@playersclubllc.com</a>
-                                        </p>
-                                    </div>
-                                </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <h2 class="brand-text" style="font-size: 2rem; margin-bottom: 2rem;">COACH JOSH BOXING
+                </h2>
+                <div class="footer-grid d-none-mobile"
+                    style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 800px; margin: 0 auto 3rem; text-align: center;">
+                    <div>
+                        <h3
+                            style="font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; margin-bottom: 0.5rem; text-transform: uppercase;">
+                            Call Us</h3>
+                        <p class="footer-text" style="font-size: 1rem; color: var(--color-dark);"><a
+                                href="tel:203215480">203-215-4800</a></p>
+                    </div>
+                    <div>
+                        <h3
+                            style="font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; margin-bottom: 0.5rem; text-transform: uppercase;">
+                            Visit Us</h3>
+                        <p class="footer-text" style="font-size: 1rem; color: var(--color-dark);">
+                            Located inside Bashta's Gym<br>55 Connolly Parkway<br>Hamden, CT 06514</p>
+                    </div>
+                    <div>
+                        <h3
+                            style="font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; margin-bottom: 0.5rem; text-transform: uppercase;">
+                            Email Us</h3>
+                        <p class="footer-text" style="font-size: 1rem; color: var(--color-dark);"><a
+                                href="mailto:coachjoshofficial@playersclubllc.com"
+                                style="word-break: break-all;">coachjoshofficial<br>@playersclubllc.com</a>
+                        </p>
+                    </div>
+                </div>
 
-                                <!-- Mobile Footer Layout -->
-                                <div class="mobile-footer"
-                                    style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem;">
-                                    <div>
-                                        <h3
-                                            style="font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; margin-bottom: 0.25rem; text-transform: uppercase;">
-                                            Call</h3>
-                                        <p class="footer-text"
-                                            style="font-size: 1rem; color: var(--color-dark); margin-bottom: 0;"><a
-                                                href="tel:203215480">203-215-4800</a></p>
-                                    </div>
-                                    <div>
-                                        <h3
-                                            style="font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; margin-bottom: 0.25rem; text-transform: uppercase;">
-                                            Visit</h3>
-                                        <p class="footer-text"
-                                            style="font-size: 1rem; color: var(--color-dark); margin-bottom: 0;">55
-                                            Connolly Parkway, Hamden, CT 06514</p>
-                                    </div>
-                                    <div>
-                                        <h3
-                                            style="font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; margin-bottom: 0.25rem; text-transform: uppercase;">
-                                            Email</h3>
-                                        <p class="footer-text"
-                                            style="font-size: 1rem; color: var(--color-dark); margin-bottom: 0;"><a
-                                                href="mailto:coachjoshofficial@playersclubllc.com">coachjoshofficial@playersclubllc.com</a>
-                                        </p>
-                                    </div>
-                                </div>
+                <!-- FAQ Section -->
+                <section id="faq"
+                    style="margin-bottom: 4rem; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto; padding-top: 2rem;">
+                    <h2 class="section-title" style="margin-bottom: 2rem; text-align: center;">FREQUENTLY ASKED
+                        QUESTIONS</h2>
 
-                                <p class="footer-text" style="margin-top: 2rem;">&copy; 2026 Coach Josh Boxing. All
-                                    rights reserved.</p>
-                            </div>
-                        </footer>
+                    <div class="faq-item"
+                        style="border: var(--border-thick); background-color: var(--color-white); margin-bottom: 1rem; box-shadow: 4px 4px 0px 0px var(--color-dark);">
+                        <div class="faq-question"
+                            style="padding: 1.5rem; font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                            <span>Will I get punched in the face my first day?</span>
+                            <span style="font-size: 1.5rem; line-height: 1;">+</span>
+                        </div>
+                        <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none;">
+                            <p style="margin:0; line-height: 1.6;">Absolutely not. Our beginner and fitness classes
+                                involve zero hard sparring. You'll hit heavy bags, mitts, and focus on mechanics and
+                                cardio. Sparring is strictly for advanced, willing participants.</p>
+                        </div>
+                    </div>
 
-                        <!-- Custom JS -->
-                        <script src="script.js"></script>
+                    <div class="faq-item"
+                        style="border: var(--border-thick); background-color: var(--color-white); margin-bottom: 1rem; box-shadow: 4px 4px 0px 0px var(--color-dark);">
+                        <div class="faq-question"
+                            style="padding: 1.5rem; font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                            <span>I'm totally out of shape. Am I too far gone for this?</span>
+                            <span style="font-size: 1.5rem; line-height: 1;">+</span>
+                        </div>
+                        <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none;">
+                            <p style="margin:0; line-height: 1.6;">No. We've trained over 200+ individuals—from athletes
+                                to people who haven't worked out in 10 years. You scale the intensity to your current
+                                fitness level. We are here to push you, not break you.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item"
+                        style="border: var(--border-thick); background-color: var(--color-white); margin-bottom: 1rem; box-shadow: 4px 4px 0px 0px var(--color-dark);">
+                        <div class="faq-question"
+                            style="padding: 1.5rem; font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                            <span>Do I need to buy expensive gear before my trial?</span>
+                            <span style="font-size: 1.5rem; line-height: 1;">+</span>
+                        </div>
+                        <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none;">
+                            <p style="margin:0; line-height: 1.6;">Nope. Just bring workout clothes, a water bottle, and
+                                a good attitude. We have loaner gloves available for your first week.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Mobile Footer Layout -->
+                <div class="mobile-footer"
+                    style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem;">
+                    <div>
+                        <h3
+                            style="font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; margin-bottom: 0.25rem; text-transform: uppercase;">
+                            Call</h3>
+                        <p class="footer-text" style="font-size: 1rem; color: var(--color-dark); margin-bottom: 0;"><a
+                                href="tel:203215480">203-215-4800</a></p>
+                    </div>
+                    <div>
+                        <h3
+                            style="font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; margin-bottom: 0.25rem; text-transform: uppercase;">
+                            Visit</h3>
+                        <p class="footer-text" style="font-size: 1rem; color: var(--color-dark); margin-bottom: 0;">55
+                            Connolly Parkway, Hamden, CT 06514</p>
+                    </div>
+                    <div>
+                        <h3
+                            style="font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; margin-bottom: 0.25rem; text-transform: uppercase;">
+                            Email</h3>
+                        <p class="footer-text" style="font-size: 1rem; color: var(--color-dark); margin-bottom: 0;"><a
+                                href="mailto:coachjoshofficial@playersclubllc.com">coachjoshofficial@playersclubllc.com</a>
+                        </p>
+                    </div>
+                </div>
+
+                <p class="footer-text" style="margin-top: 2rem;">&copy; 2026 Coach Josh Boxing. All
+                    rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- Custom JS -->
+        <script src="script.js"></script>
 </body>
 
 </html>
