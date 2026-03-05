@@ -461,12 +461,17 @@ ul {
     color: var(--color-blue);
 }
 
+.class-tag.womens {
+    border-color: #d946ef;
+    color: #d946ef;
+}
+
 /* CTA Section */
 .cta-section {
     padding: 8rem 0;
     text-align: center;
-    background-color: var(--color-dark);
-    color: var(--color-white);
+    background-color: var(--color-bg);
+    color: var(--color-dark);
     border-top: var(--border-thick);
 }
 
@@ -481,6 +486,69 @@ ul {
     max-width: 600px;
     margin: 0 auto 3rem;
     opacity: 0.9;
+}
+
+/* Gymdesk Button Component */
+.btn-gymdesk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    background-color: #f1f5f9;
+    /* Light gray base from the image */
+    color: var(--color-dark);
+    border: 3px solid var(--color-dark);
+    box-shadow: 8px 8px 0px 0px var(--color-dark);
+    /* Hard offset shadow, matching original */
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.15rem;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.btn-gymdesk:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 6px 6px 0px 0px var(--color-dark);
+}
+
+.btn-gymdesk-icon {
+    width: 24px;
+    height: 24px;
+    stroke: var(--color-dark);
+    flex-shrink: 0;
+}
+
+.btn-gymdesk-arrow {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.btn-gymdesk-text {
+    text-align: center;
+    flex-grow: 1;
+}
+
+@media (min-width: 640px) {
+    .btn-gymdesk {
+        font-size: 1.5rem;
+        padding: 1.75rem 2.5rem;
+        gap: 1.5rem;
+    }
+
+    .btn-gymdesk-text {
+        flex-grow: 0;
+    }
+
+    .btn-gymdesk-icon,
+    .btn-gymdesk-arrow {
+        width: 32px;
+        height: 32px;
+    }
 }
 
 /* Footer */
