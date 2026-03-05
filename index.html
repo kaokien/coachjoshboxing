@@ -136,12 +136,8 @@
                                     style="display: flex; flex-direction: column; gap: 4rem; align-items: center; max-width: 1000px; margin: 0 auto;">
                                     <div
                                         style="flex: 1; min-width: 300px; border: var(--border-thick); box-shadow: 8px 8px 0px 0px var(--color-white); background-color: var(--color-bg); overflow: hidden; aspect-ratio: 3/4; position: relative;">
-                                        <!-- Placeholder visual to match aesthetic, since we can't scrape the actual image easily and don't want to break out of funnel -->
-                                        <div
-                                            style="position: absolute; inset: 0; background: linear-gradient(45deg, var(--color-blue), var(--color-dark)); display: flex; align-items: center; justify-content: center;">
-                                            <span
-                                                style="font-family: var(--font-display); font-size: 5rem; font-weight: 900; color: rgba(255,255,255,0.2); transform: rotate(-10deg);">C.J.</span>
-                                        </div>
+                                        <img src="coach-josh.webp" alt="Coach Josh"
+                                            style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
                                     </div>
                                     <div style="flex: 1; text-align: left;">
                                         <h2 class="section-title" style="margin-bottom: 1.5rem; text-align: left;">MEET
@@ -172,106 +168,78 @@
                         </section>
 
                         <!-- Schedule & Location -->
-                        <section id="schedule" class="schedule bg-bg">
+                        <section id="schedule" class="schedule bg-bg" style="padding: 6rem 0;">
                             <div class="container">
                                 <div class="section-header">
-                                    <h2 class="section-title">WEEKLY SCHEDULE</h2>
+                                    <h2 class="section-title">TRAINING SCHEDULE</h2>
                                     <p>Find a class time that works for you.</p>
+                                </div>
 
-                                    <div class="schedule-table-container">
-                                        <table class="schedule-table">
-                                            <thead>
-                                                <tr>
-                                                    <th>DAY</th>
-                                                    <th>TIME</th>
-                                                    <th>FORMAT</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><strong>Monday</strong></td>
-                                                    <td>5:00 PM - 6:00 PM</td>
-                                                    <td>
-                                                        Youth Boxing
-                                                        <br><span class="class-tag kids">Kids Class</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>Monday</strong></td>
-                                                    <td>7:30 PM - 9:00 PM</td>
-                                                    <td>
-                                                        Fundamentals & Conditioning
-                                                        <br><span class="class-tag adults">Adults & Teens</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>Tuesday</strong></td>
-                                                    <td>7:30 PM - 9:00 PM</td>
-                                                    <td>
-                                                        Advanced Drills & Technique
-                                                        <br><span class="class-tag adults">Adults & Teens</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>Wednesday</strong></td>
-                                                    <td>5:00 PM - 6:00 PM</td>
-                                                    <td>
-                                                        Youth Boxing
-                                                        <br><span class="class-tag kids">Kids Class</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>Wednesday</strong></td>
-                                                    <td>7:30 PM - 9:00 PM</td>
-                                                    <td>
-                                                        Sparring & Conditioning
-                                                        <br><span class="class-tag adults">Adults & Teens</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>Thursday</strong></td>
-                                                    <td>7:30 PM - 9:00 PM</td>
-                                                    <td>
-                                                        Fundamentals & Conditioning
-                                                        <br><span class="class-tag adults">Adults & Teens</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>Friday</strong></td>
-                                                    <td>5:00 PM - 6:00 PM</td>
-                                                    <td>
-                                                        Youth Boxing
-                                                        <br><span class="class-tag kids">Kids Class</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>Friday</strong></td>
-                                                    <td>6:00 PM - 7:00 PM</td>
-                                                    <td>
-                                                        Women's Only Boxing
-                                                        <br><span class="class-tag womens">Women's Only</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>Friday</strong></td>
-                                                    <td>7:30 PM - 9:00 PM</td>
-                                                    <td>
-                                                        Open Sparring
-                                                        <br><span class="class-tag adults">Adults & Teens</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>Saturday</strong></td>
-                                                    <td>10:00 AM - 12:00 PM</td>
-                                                    <td>
-                                                        Open Gym & Private Specs
-                                                        <br><span class="class-tag open">Open Gym</span>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                <div class="schedule-matrix-container">
+                                    <table class="schedule-matrix">
+                                        <thead>
+                                            <tr>
+                                                <th class="time-col">TIME</th>
+                                                <th>MON</th>
+                                                <th>TUE</th>
+                                                <th>WED</th>
+                                                <th>THU</th>
+                                                <th>FRI</th>
+                                                <th>SAT</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="time-col">10 AM - 12 PM</td>
+                                                <td><span class="empty-dash">-</span></td>
+                                                <td><span class="empty-dash">-</span></td>
+                                                <td><span class="empty-dash">-</span></td>
+                                                <td><span class="empty-dash">-</span></td>
+                                                <td><span class="empty-dash">-</span></td>
+                                                <td><span class="matrix-tag open">OPEN GYM</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="time-col">5 PM - 6 PM</td>
+                                                <td><span class="matrix-tag kids">KIDS CLASS</span></td>
+                                                <td><span class="empty-dash">-</span></td>
+                                                <td><span class="matrix-tag kids">KIDS CLASS</span></td>
+                                                <td><span class="empty-dash">-</span></td>
+                                                <td><span class="matrix-tag kids">KIDS CLASS</span></td>
+                                                <td><span class="empty-dash">-</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="time-col">6 PM - 7 PM</td>
+                                                <td><span class="empty-dash">-</span></td>
+                                                <td><span class="empty-dash">-</span></td>
+                                                <td><span class="empty-dash">-</span></td>
+                                                <td><span class="empty-dash">-</span></td>
+                                                <td><span class="matrix-tag womens">WOMEN'S ONLY</span></td>
+                                                <td><span class="empty-dash">-</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="time-col">7:30 PM - 9 PM</td>
+                                                <td><span class="matrix-tag adults">ADULTS & TEENS</span></td>
+                                                <td><span class="matrix-tag adults">ADULTS & TEENS</span></td>
+                                                <td><span class="matrix-tag adults">ADULTS & TEENS</span></td>
+                                                <td><span class="matrix-tag adults">ADULTS & TEENS</span></td>
+                                                <td><span class="matrix-tag adults">ADULTS & TEENS</span></td>
+                                                <td><span class="empty-dash">-</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div class="schedule-legend">
+                                        <div class="legend-item"><span class="matrix-tag adults legend-tag"></span>
+                                            Adults & Teens</div>
+                                        <div class="legend-item"><span class="matrix-tag kids legend-tag"></span> Kids
+                                            Class</div>
+                                        <div class="legend-item"><span class="matrix-tag womens legend-tag"></span>
+                                            Women's Only</div>
+                                        <div class="legend-item"><span class="matrix-tag open legend-tag"></span> Open
+                                            Gym</div>
                                     </div>
                                 </div>
+                            </div>
                         </section>
 
                         <!-- Final CTA (Funnel Signup) -->

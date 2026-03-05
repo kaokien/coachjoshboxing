@@ -389,81 +389,110 @@ ul {
     margin-bottom: 1rem;
 }
 
-/* Schedule section */
-.schedule {
-    padding: 6rem 0;
-}
-
-.schedule-table-container {
+/* Schedule Matrix */
+.schedule-matrix-container {
     overflow-x: auto;
+    background-color: var(--color-dark);
     border: var(--border-thick);
     box-shadow: var(--shadow-hard);
-    background-color: var(--color-white);
+    max-width: 1100px;
     margin: 0 auto;
-    max-width: 1000px;
+    padding: 2rem;
 }
 
-.schedule-table {
+.schedule-matrix {
     width: 100%;
     border-collapse: collapse;
-    min-width: 600px;
-}
-
-.schedule-table th,
-.schedule-table td {
-    padding: 1.5rem;
-    text-align: left;
-    border-bottom: 2px solid var(--color-dark);
-}
-
-.schedule-table th {
-    background-color: var(--color-dark);
+    min-width: 800px;
     color: var(--color-white);
     font-family: var(--font-display);
-    font-size: 1.25rem;
+}
+
+.schedule-matrix th,
+.schedule-matrix td {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #1e293b;
+    border-top: 1px solid #1e293b;
+    font-size: 0.95rem;
+}
+
+.schedule-matrix th {
+    font-weight: 900;
+    color: #94a3b8;
+    letter-spacing: 0.05em;
+    padding-bottom: 2rem;
+    border-top: none;
+}
+
+.schedule-matrix .time-col {
+    text-align: left;
+    font-weight: 800;
+    width: 15%;
+}
+
+.empty-dash {
+    color: #334155;
+    font-weight: 800;
+}
+
+.matrix-tag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.8rem;
     letter-spacing: 0.05em;
 }
 
-.schedule-table td {
-    border-right: 2px solid var(--color-dark);
+.matrix-tag.kids {
+    color: #f87171;
+    border: 1px solid #991b1b;
+    background-color: rgba(153, 27, 27, 0.2);
 }
 
-.schedule-table td:last-child {
-    border-right: none;
+.matrix-tag.adults {
+    color: var(--color-white);
+    border: 1px solid #475569;
+    background-color: rgba(71, 85, 105, 0.2);
 }
 
-.schedule-table tr:last-child td {
-    border-bottom: none;
+.matrix-tag.womens {
+    color: #f472b6;
+    border: 1px solid #831843;
+    background-color: rgba(131, 24, 67, 0.2);
 }
 
-.class-tag {
-    display: inline-block;
-    padding: 0.25rem 0.5rem;
-    font-size: 0.75rem;
-    font-weight: 700;
-    border: 2px solid var(--color-dark);
-    border-radius: 4px;
-    background-color: var(--color-bg);
-    margin-top: 0.5rem;
+.matrix-tag.open {
+    color: #60a5fa;
+    border: 1px solid #1e3a8a;
+    background-color: rgba(30, 58, 138, 0.2);
 }
 
-.class-tag.kids {
-    border-color: #ef4444;
-    color: #ef4444;
+.schedule-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #1e293b;
+    color: #94a3b8;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    align-items: center;
 }
 
-.class-tag.adults {
-    border-color: var(--color-dark);
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
-.class-tag.open {
-    border-color: var(--color-blue);
-    color: var(--color-blue);
-}
-
-.class-tag.womens {
-    border-color: #d946ef;
-    color: #d946ef;
+.legend-tag {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    color: transparent !important;
 }
 
 /* Secondary Layout Utilities */
