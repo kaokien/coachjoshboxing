@@ -74,4 +74,20 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // Mobile Sticky CTA Scroll Reveal
+  const stickyCta = document.querySelector('.mobile-sticky-cta');
+  const heroSection = document.querySelector('.hero');
+
+  if (stickyCta && heroSection) {
+    window.addEventListener('scroll', () => {
+      const heroBottom = heroSection.getBoundingClientRect().bottom;
+      // Show CTA only after scrolling past the hero section
+      if (heroBottom < 0) {
+        stickyCta.classList.add('visible');
+      } else {
+        stickyCta.classList.remove('visible');
+      }
+    });
+  }
 });

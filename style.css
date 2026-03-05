@@ -712,6 +712,18 @@ ul {
         border-top: var(--border-thick);
         box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
         z-index: 1000;
+
+        /* Scroll Default Hidden State */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(100%);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .mobile-sticky-cta.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
     /* Ensure footer doesn't get hidden behind the sticky CTA */
