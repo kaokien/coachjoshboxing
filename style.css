@@ -466,6 +466,16 @@ ul {
     color: #d946ef;
 }
 
+/* Secondary Layout Utilities */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 /* CTA Section */
 .cta-section {
     padding: 8rem 0;
@@ -554,7 +564,6 @@ ul {
 /* Footer */
 .footer {
     padding: 3rem 0;
-    text-align: center;
     border-top: var(--border-thick);
     background-color: var(--color-white);
 }
@@ -563,4 +572,14 @@ ul {
     font-size: 0.875rem;
     color: #64748b;
     margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .about-container {
+        flex-direction: row !important;
+    }
+
+    .mobile-footer {
+        display: none !important;
+    }
 }
