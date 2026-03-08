@@ -835,3 +835,162 @@ ul {
         width: auto;
     }
 }
+
+/* --- PRIVATE 1-ON-1 SECTION --- */
+.private-section {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: 6rem 1rem;
+    border-bottom: var(--border-thick);
+}
+
+.private-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (min-width: 900px) {
+    .private-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch; /* Align items vertically if needed */
+    }
+}
+
+.private-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.private-label {
+    color: #ef4444; /* red-500 */
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.private-label::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ef4444;
+    border-radius: 50%;
+}
+
+.private-title {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    line-height: 1;
+    margin-bottom: 2rem;
+    color: white; /* Ensure it stays strictly white */
+}
+
+.private-description {
+    font-size: 1.1rem;
+    color: #94a3b8; /* slate-400 */
+    margin-bottom: 2rem;
+    font-family: var(--font-body);
+}
+
+.private-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.private-check-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #cbd5e1; /* slate-300 */
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.private-check-item svg {
+    color: #2563eb; /* blue-600 */
+    flex-shrink: 0;
+}
+
+/* The interactive booking card that looks like a button */
+.private-booking-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+@media (min-width: 900px) {
+    .private-booking-wrapper {
+        justify-content: flex-end; /* Push card to the right on desktop */
+    }
+}
+
+.private-booking-card {
+    background-color: #f8fafc; /* very light grey/white */
+    border: var(--border-thick);
+    padding: 3rem 2rem;
+    box-shadow: 12px 12px 0px 0px rgba(0,0,0,0.5); /* Heavy shadow matching inspiration */
+    display: flex;
+    align-items: flex-start; /* Arrow top right relative to text */
+    justify-content: space-between;
+    text-decoration: none;
+    color: var(--color-dark);
+    transition: all var(--transition-fast);
+    width: 100%;
+    max-width: 450px; /* Keep it constrained */
+}
+
+.private-booking-card:hover {
+    transform: translate(4px, 4px);
+    box-shadow: 8px 8px 0px 0px rgba(0,0,0,0.5);
+}
+
+.booking-text-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.booking-title {
+    font-family: var(--font-display);
+    font-size: 2.25rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.1;
+    color: var(--color-dark);
+}
+
+.booking-price {
+    color: #2563eb; /* blue-600 */
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.booking-arrow {
+    width: 32px;
+    height: 32px;
+    stroke: var(--color-dark);
+    flex-shrink: 0;
+    margin-top: 0.25rem; /* Optical alignment with title */
+    transition: transform 0.2s ease;
+}
+
+.private-booking-card:hover .booking-arrow {
+    transform: translate(2px, -2px); /* Diagonal arrow move on hover */
+}
