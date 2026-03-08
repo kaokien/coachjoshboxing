@@ -731,3 +731,107 @@ ul {
         padding-bottom: 120px;
     }
 }
+/* --- COOKIE CONSENT BANNER --- */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    border-top: var(--border-thick);
+    padding: 1.5rem;
+    z-index: 9999;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(100%);
+    transition: transform var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cookie-banner.visible {
+    transform: translateY(0);
+}
+
+.cookie-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cookie-text p {
+    font-size: 0.95rem;
+    color: var(--color-dark);
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.cookie-text a {
+    color: var(--color-blue);
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.cookie-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.cookie-btn {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--color-dark);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-align: center;
+}
+
+.cookie-btn-accept {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    box-shadow: 4px 4px 0px 0px var(--color-dark);
+}
+
+.cookie-btn-accept:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px var(--color-dark);
+}
+
+.cookie-btn-decline {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+}
+
+.cookie-btn-decline:hover {
+    background-color: #f1f5f9;
+}
+
+@media (min-width: 768px) {
+    .cookie-banner {
+        padding: 2rem;
+    }
+
+    .cookie-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+    }
+
+    .cookie-text {
+        flex: 1;
+        padding-right: 2rem;
+    }
+
+    .cookie-actions {
+        flex-direction: row;
+        width: auto;
+    }
+}
