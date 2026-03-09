@@ -90,61 +90,106 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // --- Analytics Tracking for Links Page ---
+  const classTrialBtn = document.getElementById('link-class-trial');
+  if (classTrialBtn) {
+    classTrialBtn.addEventListener('click', () => {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'click_class_trial',
+        'event_category': 'Links Page'
+      });
+    });
+  }
+
+  const privateCoachingBtn = document.getElementById('link-private-coaching');
+  if (privateCoachingBtn) {
+    privateCoachingBtn.addEventListener('click', () => {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'click_private_coaching',
+        'event_category': 'Links Page'
+      });
+    });
+  }
+
+  const discordBtn = document.getElementById('link-discord');
+  if (discordBtn) {
+    discordBtn.addEventListener('click', () => {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'click_discord',
+        'event_category': 'Links Page'
+      });
+    });
+  }
+
+  const partnershipBtn = document.getElementById('link-partnership');
+  if (partnershipBtn) {
+    partnershipBtn.addEventListener('click', () => {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'click_partnership',
+        'event_category': 'Links Page'
+      });
+    });
+  }
 });
 
-  // --- STRICT GDPR COOKIE CONSENT START ---
-  const cookieBanner = document.getElementById('cookie-consent-banner');
-  const btnAccept = document.getElementById('btn-accept-cookies');
-  const btnDecline = document.getElementById('btn-decline-cookies');
+// --- STRICT GDPR COOKIE CONSENT START ---
+const cookieBanner = document.getElementById('cookie-consent-banner');
+const btnAccept = document.getElementById('btn-accept-cookies');
+const btnDecline = document.getElementById('btn-decline-cookies');
 
-  if (cookieBanner && btnAccept && btnDecline) {
-    // Check if consent has already been given or declined
-    const consent = localStorage.getItem('cookieConsent');
-    
-    if (!consent) {
-      // Show banner if no consent choice is found
-      // small timeout to ensure smooth animation
-      setTimeout(() => cookieBanner.classList.add('visible'), 500); 
-    } else if (consent === 'accepted') {
-      // Load Google Analytics ONLY if accepted
-      loadGoogleAnalytics();
-    }
+if (cookieBanner && btnAccept && btnDecline) {
+  // Check if consent has already been given or declined
+  const consent = localStorage.getItem('cookieConsent');
 
-    // Accept Cookies
-    btnAccept.addEventListener('click', () => {
-      localStorage.setItem('cookieConsent', 'accepted');
-      cookieBanner.classList.remove('visible');
-      loadGoogleAnalytics();
-    });
-
-    // Decline Cookies
-    btnDecline.addEventListener('click', () => {
-      localStorage.setItem('cookieConsent', 'declined');
-      cookieBanner.classList.remove('visible');
-      // strict GDPR -> do not load GA
-    });
+  if (!consent) {
+    // Show banner if no consent choice is found
+    // small timeout to ensure smooth animation
+    setTimeout(() => cookieBanner.classList.add('visible'), 500);
+  } else if (consent === 'accepted') {
+    // Load Google Analytics ONLY if accepted
+    loadGoogleAnalytics();
   }
 
-  // Inject Google Analytics dynamically
-  function loadGoogleAnalytics() {
-    // Prevent loading multiple times if clicked repeatedly
-    if (document.getElementById('google-analytics-script')) return;
+  // Accept Cookies
+  btnAccept.addEventListener('click', () => {
+    localStorage.setItem('cookieConsent', 'accepted');
+    cookieBanner.classList.remove('visible');
+    loadGoogleAnalytics();
+  });
 
-    const measurementId = 'G-PVYFVNXBCD';
+  // Decline Cookies
+  btnDecline.addEventListener('click', () => {
+    localStorage.setItem('cookieConsent', 'declined');
+    cookieBanner.classList.remove('visible');
+    // strict GDPR -> do not load GA
+  });
+}
 
-    // 1. Inject gtag.js
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
-    script.id = 'google-analytics-script';
-    document.head.appendChild(script);
+// Inject Google Analytics dynamically
+function loadGoogleAnalytics() {
+  // Prevent loading multiple times if clicked repeatedly
+  if (document.getElementById('google-analytics-script')) return;
 
-    // 2. Initialize layer & config
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){window.dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', measurementId);
+  const measurementId = 'G-PVYFVNXBCD';
 
-    console.log('Google Analytics loaded successfully.');
-  }
-  // --- STRICT GDPR COOKIE CONSENT END ---
+  // 1. Inject gtag.js
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+  script.id = 'google-analytics-script';
+  document.head.appendChild(script);
+
+  // 2. Initialize layer & config
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { window.dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', measurementId);
+
+  console.log('Google Analytics loaded successfully.');
+}
+// --- STRICT GDPR COOKIE CONSENT END ---

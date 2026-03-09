@@ -1171,6 +1171,12 @@ ul {
     color: var(--color-white);
 }
 
+.link-primary {
+    background-color: #ccff00;
+    /* Neon Lime */
+    color: var(--color-dark);
+}
+
 .link-icon-wrapper {
     width: 48px;
     height: 48px;
