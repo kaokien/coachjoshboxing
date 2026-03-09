@@ -125,6 +125,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const youtubeBtn = document.getElementById('link-youtube');
+  if (youtubeBtn) {
+    youtubeBtn.addEventListener('click', () => {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'click_youtube',
+        'event_category': 'Links Page'
+      });
+    });
+  }
+
   const partnershipBtn = document.getElementById('link-partnership');
   if (partnershipBtn) {
     partnershipBtn.addEventListener('click', () => {

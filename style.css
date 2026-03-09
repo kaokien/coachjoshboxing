@@ -1171,6 +1171,12 @@ ul {
     color: var(--color-white);
 }
 
+.link-red {
+    background-color: #dc2626;
+    /* YouTube Red */
+    color: var(--color-white);
+}
+
 .link-primary {
     background-color: #ccff00;
     /* Neon Lime */
