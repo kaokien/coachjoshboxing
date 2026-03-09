@@ -1,3 +1,20 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/ig",
+      "destination": "/links?utm_source=ig_bio&utm_medium=linkinbio",
+      "permanent": false
+    },
+    {
+      "source": "/tiktok",
+      "destination": "/links?utm_source=tiktok_bio&utm_medium=linkinbio",
+      "permanent": false
+    },
+    {
+      "source": "/yt",
+      "destination": "/links?utm_source=yt_desc&utm_medium=linkinbio",
+      "permanent": false
+    }
+  ]
 }
