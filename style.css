@@ -1069,6 +1069,31 @@ ul {
     box-shadow: 2px 2px 0px 0px var(--color-dark);
 }
 
+/* Specific Social Hover Colors */
+.social-btn:nth-child(1):hover {
+    background-color: #000000;
+    /* TikTok Black */
+    color: var(--color-white);
+}
+
+.social-btn:nth-child(2):hover {
+    background-color: #E1306C;
+    /* Instagram Pink/Purple */
+    color: var(--color-white);
+}
+
+.social-btn:nth-child(3):hover {
+    background-color: #FF0000;
+    /* YouTube Red */
+    color: var(--color-white);
+}
+
+.social-btn:nth-child(4):hover {
+    background-color: #5865F2;
+    /* Discord Blue */
+    color: var(--color-white);
+}
+
 .social-btn svg {
     width: 24px;
     height: 24px;
