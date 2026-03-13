@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coach Josh Boxing | Women's Only Classes</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Women's only boxing fitness classes in Hamden, CT. Burn maximum calories, learn real striking mechanics, and train in a zero-intimidation environment. Claim your free week!">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,700;0,800;0,900;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background-color: var(--color-bg);
+            min-height: 100vh;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            background-image: radial-gradient(circle at 0% 0%, #fbcfe8 0%, transparent 40%),
+                              radial-gradient(circle at 100% 100%, #fbcfe8 0%, transparent 40%);
+        }
+
+        .flyer-container {
+            width: 100%;
+            max-width: 800px;
+            background-color: var(--color-white);
+            border: 4px solid var(--color-dark);
+            box-shadow: 16px 16px 0px 0px #db2777;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .flyer-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 4px solid var(--color-dark);
+            padding-bottom: 1.5rem;
+        }
+
+        .brand-name {
+            font-size: 1.25rem;
+            font-weight: 800;
+            font-family: var(--font-body);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #db2777;
+            margin-bottom: 0.75rem;
+            display: inline-block;
+            border: 2px solid #db2777;
+            padding: 0.25rem 0.75rem;
+            background-color: #fdf2f8;
+        }
+
+        .flyer-title {
+            font-size: 3.75rem;
+            line-height: 0.95;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            color: var(--color-dark);
+            letter-spacing: -0.02em;
+        }
+
+        .highlight-pink {
+            color: #db2777;
+        }
+
+        .flyer-subtitle {
+            font-size: 1.15rem;
+            color: var(--color-dark);
+            font-weight: 800;
+            font-family: var(--font-body);
+            text-transform: uppercase;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.4;
+        }
+        
+        .main-content {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            align-items: stretch;
+        }
+
+        @media (max-width: 650px) {
+            .main-content {
+                flex-direction: column;
+            }
+        }
+
+        .image-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .text-col {
+            flex: 1.1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .flyer-image {
+            width: 100%;
+            border: 4px solid var(--color-dark);
+            box-shadow: 6px 6px 0px 0px var(--color-dark);
+            object-fit: cover;
+            aspect-ratio: 1;
+            display: block;
+        }
+
+        /* Detail Boxes */
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .detail-box {
+            border: 3px solid var(--color-dark);
+            padding: 1rem;
+            background-color: var(--color-white);
+            box-shadow: 4px 4px 0px 0px #db2777;
+        }
+
+        .detail-label {
+            font-family: var(--font-body);
+            font-weight: 800;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: #db2777;
+            margin-bottom: 0.25rem;
+            letter-spacing: 0.05em;
+        }
+
+        .detail-value {
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: 1.6rem;
+            line-height: 1.1;
+            color: var(--color-dark);
+            text-transform: uppercase;
+        }
+
+        /* Information Block */
+        .info-block {
+            background-color: #fdf2f8;
+            border: 3px solid var(--color-dark);
+            padding: 1.5rem;
+            box-shadow: 6px 6px 0px 0px var(--color-dark);
+            flex-grow: 1;
+        }
+
+        .info-desc {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 1.05rem;
+            line-height: 1.5;
+            color: var(--color-dark);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px dashed #db2777;
+            padding-bottom: 1rem;
+        }
+
+        .features-title {
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: var(--color-dark);
+            text-transform: uppercase;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-icon {
+            font-size: 1.25rem;
+            line-height: 1.2;
+        }
+
+        .feature-text {
+            font-family: var(--font-body);
+            font-weight: 700;
+            font-size: 1rem;
+            margin: 0;
+            color: var(--color-dark);
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        /* Call to Action */
+        .cta-section {
+            background-color: var(--color-dark);
+            color: var(--color-white);
+            border: 3px solid var(--color-dark);
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 8px 8px 0px 0px #db2777;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .cta-title {
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: 2.25rem;
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+            color: var(--color-white);
+        }
+
+        .cta-subtitle {
+            font-family: var(--font-body);
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #fbcfe8;
+        }
+
+        .trial-badge {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background-color: #db2777;
+            color: white;
+            padding: 0.5rem 1rem;
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: 1.25rem;
+            transform: rotate(5deg);
+            border: 3px solid var(--color-dark);
+            text-transform: uppercase;
+        }
+
+        /* Footer */
+        .flyer-footer {
+            border-top: 4px solid var(--color-dark);
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-text {
+            font-family: var(--font-body);
+            font-weight: 700;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .qr-box {
+            border: 3px solid var(--color-dark);
+            background-color: var(--color-white);
+            padding: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 4px 4px 0px 0px var(--color-dark);
+        }
+
+        /* Decorative Elements */
+        .corner-accent {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #db2777;
+            border: 4px solid var(--color-dark);
+        }
+        .top-left { top: -4px; left: -4px; border-top: none; border-left: none; }
+        .bottom-right { bottom: -4px; right: -4px; border-bottom: none; border-right: none; }
+
+        /* Print Styles */
+        @media print {
+            @page { size: letter portrait; margin: 0.25in; }
+            body { background: none; padding: 0; margin: 0; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            .flyer-container { max-width: 100%; border: 3px solid var(--color-dark); box-shadow: none; padding: 1.25rem; margin: 0 auto; height: auto; page-break-inside: avoid; }
+            .flyer-image { box-shadow: none; border-width: 3px; }
+            .detail-box { box-shadow: none; }
+            .info-block { box-shadow: none; border-width: 3px; }
+            .cta-section { box-shadow: none; border-width: 3px; padding: 1.25rem; }
+            .qr-box { box-shadow: none; }
+            .trial-badge { border-width: 2px; }
+            
+            /* Print Scaling Adjustments */
+            .flyer-header { margin-bottom: 1.25rem; padding-bottom: 1.25rem; }
+            .flyer-title { font-size: 3.25rem; margin-bottom: 0.25rem; }
+            .flyer-subtitle { font-size: 1rem; }
+            .main-content { gap: 1.25rem; margin-bottom: 1.25rem; }
+            .detail-value { font-size: 1.35rem; }
+            .info-desc { font-size: 0.95rem; margin-bottom: 1rem; padding-bottom: 0.75rem; }
+            .features-title { font-size: 1.5rem; margin-bottom: 0.75rem; }
+            .feature-text { font-size: 0.9rem; }
+            .cta-title { font-size: 2rem; }
+            .cta-subtitle { font-size: 1rem; }
+            .flyer-footer { padding-top: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flyer-container">
+        <div class="corner-accent top-left"></div>
+        <div class="corner-accent bottom-right"></div>
+        
+        <header class="flyer-header">
+            <div class="brand-name">Coach Josh Boxing</div>
+            <h1 class="flyer-title brand-text">EMPOWERING <span class="highlight-pink">WOMEN</span><br>THROUGH BOXING</h1>
+            <p class="flyer-subtitle">An intense, stress-relieving workout dedicated entirely to women. Build strength and learn real skills.</p>
+        </header>
+
+        <main>
+            <div class="main-content">
+                <!-- Image & Details Column -->
+                <div class="image-col">
+                    <img src="womens-boxing-graphic.png" alt="Women's Boxing" class="flyer-image">
+                    
+                    <div class="details-grid">
+                        <div class="detail-box">
+                            <div class="detail-label">When</div>
+                            <div class="detail-value">Every Friday<br>6:00 - 7:00 PM</div>
+                        </div>
+                        <div class="detail-box">
+                            <div class="detail-label">Who</div>
+                            <div class="detail-value">Women Only<br><span style="font-size: 1.1rem; color: #64748b;">Ages 13 & Up</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text & Features Column -->
+                <div class="text-col">
+                    <div class="info-block">
+                        <p class="info-desc">
+                            Train in a safe workspace surrounded by supportive women with zero intimidation. No prior boxing experience is needed to burn maximum calories and get into the best shape of your life!
+                        </p>
+                        
+                        <h2 class="features-title">Why Train Here?</h2>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">🛡️</div>
+                            <p class="feature-text">Zero Intimidation Environment</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">🥊</div>
+                            <p class="feature-text">Learn Real Striking Mechanics</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">🔥</div>
+                            <p class="feature-text">Elite Calorie-Burning Conditioning</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">🤝</div>
+                            <p class="feature-text">Supportive Local Community</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <a href="https://bashtas-martial-arts.gymdesk.com/signup" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                <section class="cta-section" style="transition: transform 0.2s, box-shadow 0.2s;">
+                    <div class="trial-badge">Free Trial!</div>
+                    <h2 class="cta-title">CLAIM YOUR FIRST WEEK FREE</h2>
+                    <p class="cta-subtitle">Don't have gear? We have loaner gloves waiting for you.</p>
+                </section>
+            </a>
+            <p style="text-align: center; font-size: 0.85rem; color: #64748b; font-weight: 600; font-family: var(--font-body); margin-bottom: 2rem;">Secure booking handled via Gymdesk.</p>
+        </main>
+
+        <footer class="flyer-footer">
+            <div class="footer-info">
+                <div class="footer-text">
+                    <span style="font-size: 1.25rem;">📍</span> 55 Connolly Parkway, Hamden, CT
+                </div>
+                <div class="footer-text" style="color: #db2777;">
+                    <span style="font-size: 1.25rem;">📱</span> @coachjoshofficial
+                </div>
+                <div class="footer-text">
+                    <span style="font-size: 1.25rem;">🌐</span> coachjoshboxing.com
+                </div>
+            </div>
+            
+            <div class="qr-box">
+                <img src="qrcode.png" alt="Scan to Sign Up" style="width: 75px; height: 75px; display: block;">
+                <span style="font-family: var(--font-body); font-weight: 900; font-size: 0.65rem; margin-top: 0.25rem; text-transform: uppercase;">Scan To Start</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Strict Cookie Consent Banner -->
+    <div id="cookie-consent-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p>We use essential cookies to make this site work. With your consent, we would also like to use non-essential analytics cookies (Google Analytics). We will only use these cookies if you click "Accept". See our <a href="privacy.html">Privacy Policy</a>.</p>
+            </div>
+            <div class="cookie-actions">
+                <button id="btn-decline-cookies" class="cookie-btn cookie-btn-decline">Decline</button>
+                <button id="btn-accept-cookies" class="cookie-btn cookie-btn-accept">Accept</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JS (Handles tracking & cookies) -->
+    <script src="script.js"></script>
+
+</body>
+</html>
