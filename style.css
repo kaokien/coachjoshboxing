@@ -181,22 +181,7 @@ ul {
     align-items: center;
 }
 
-.nav-logo-img {
-    height: 60px;
-    width: 220px;
-    max-width: 70vw;
-    object-fit: contain;
-    object-position: left center;
-    filter: drop-shadow(3px 3px 0px var(--color-dark));
-}
 
-@media (min-width: 768px) {
-    .nav-logo-img {
-        width: auto;
-        height: 80px;
-        filter: drop-shadow(4px 4px 0px var(--color-dark));
-    }
-}
 
 .nav-links {
     display: none;
