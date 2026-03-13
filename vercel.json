@@ -20,15 +20,15 @@
   "rewrites": [
     {
       "source": "/womens",
-      "destination": "/womens-only-flyer.html"
+      "destination": "/womens-only-flyer"
     },
     {
       "source": "/teens-adults",
-      "destination": "/teens-adults-flyer.html"
+      "destination": "/teens-adults-flyer"
     },
     {
       "source": "/kids",
-      "destination": "/kids-boxing-flyer.html"
+      "destination": "/kids-boxing-flyer"
     }
   ]
 }
