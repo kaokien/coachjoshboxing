@@ -187,6 +187,7 @@ function loadGoogleAnalytics() {
   if (document.getElementById('google-analytics-script')) return;
 
   const measurementId = 'G-PVYFVNXBCD';
+  const adsId = 'AW-17990510454';
 
   // 1. Inject gtag.js
   const script = document.createElement('script');
@@ -200,6 +201,7 @@ function loadGoogleAnalytics() {
   function gtag() { window.dataLayer.push(arguments); }
   gtag('js', new Date());
   gtag('config', measurementId);
+  gtag('config', adsId);
 
   console.log('Google Analytics loaded successfully.');
 }
