@@ -162,19 +162,15 @@ ul {
     border-bottom: var(--border-thick);
 }
 
-/* Needs solid background behind noise */
-.header::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-color: var(--color-bg);
-    z-index: -1;
-}
+
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
+    min-height: 5rem;
+    position: relative;
+    z-index: 10;
 }
 
 .logo {
@@ -183,6 +179,23 @@ ul {
     letter-spacing: -0.05em;
     display: flex;
     align-items: center;
+}
+
+.nav-logo-img {
+    height: 60px;
+    width: 220px;
+    max-width: 70vw;
+    object-fit: contain;
+    object-position: left center;
+    filter: drop-shadow(3px 3px 0px var(--color-dark));
+}
+
+@media (min-width: 768px) {
+    .nav-logo-img {
+        width: auto;
+        height: 80px;
+        filter: drop-shadow(4px 4px 0px var(--color-dark));
+    }
 }
 
 .nav-links {
@@ -230,6 +243,9 @@ ul {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
+    color: var(--color-dark);
+    position: relative;
+    z-index: 10;
 }
 
 @media (min-width: 768px) {
