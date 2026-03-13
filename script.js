@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // If they clicked the map wrapper specifically, we need to handle the redirect manually
     // because we disabled pointer-events on the iframe to track the click
     if (this === mapWrapper) {
-      window.open("https://maps.app.goo.gl/qX8S7vS8yL3ZzH3u7", "_blank");
+      window.open("https://maps.app.goo.gl/tkJkRVJnFdmE6RPu6", "_blank");
     }
   }
 
