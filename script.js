@@ -146,6 +146,30 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  // --- Google Ads "Get Directions" Conversion Tracking ---
+  const addressLink = document.getElementById('location-address-link');
+  const mapWrapper = document.getElementById('location-map-wrapper');
+
+  function triggerDirectionsConversion() {
+    // Only fire if Google tag is loaded and consent is accepted
+    if (window.dataLayer && localStorage.getItem('cookieConsent') === 'accepted') {
+      // Fire standard Ads conversion event
+      function gtag() { window.dataLayer.push(arguments); }
+      gtag('event', 'conversion', { 'send_to': 'AW-17990510454' });
+      console.log('Fired Get Directions conversion event');
+    }
+    
+    // If they clicked the map wrapper specifically, we need to handle the redirect manually
+    // because we disabled pointer-events on the iframe to track the click
+    if (this === mapWrapper) {
+      window.open("https://maps.app.goo.gl/qX8S7vS8yL3ZzH3u7", "_blank");
+    }
+  }
+
+  if (addressLink) addressLink.addEventListener('click', triggerDirectionsConversion);
+  if (mapWrapper) mapWrapper.addEventListener('click', triggerDirectionsConversion);
+
 });
 
 // --- STRICT GDPR COOKIE CONSENT START ---
