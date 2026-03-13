@@ -16,5 +16,19 @@
       "destination": "/links?utm_source=yt_desc&utm_medium=linkinbio",
       "permanent": false
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/womens",
+      "destination": "/womens-only-flyer.html"
+    },
+    {
+      "source": "/teens-adults",
+      "destination": "/teens-adults-flyer.html"
+    },
+    {
+      "source": "/kids",
+      "destination": "/kids-boxing-flyer.html"
+    }
   ]
 }
