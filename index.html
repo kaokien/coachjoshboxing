@@ -205,6 +205,33 @@
             </div>
         </section>
 
+        <!-- Wall of Love (Social Proof) -->
+        <section id="reviews" style="background-color: var(--color-bg); padding: 4rem 0; border-bottom: var(--border-thick);">
+            <div class="container">
+                <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">WHAT ATHLETES SAY</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <!-- Review 1 -->
+                    <div style="background-color: var(--color-white); border: var(--border-thick); box-shadow: 4px 4px 0px 0px var(--color-dark); padding: 2rem;">
+                        <div style="font-size: 1.2rem; color: #f59e0b; margin-bottom: 1rem;">★★★★★</div>
+                        <p style="font-family: var(--font-body); font-style: italic; margin-bottom: 1rem; line-height: 1.6;">"Coach Josh is the real deal. I came in with zero experience and was terrified, but he broke everything down perfectly. I've lost 15lbs and my confidence is through the roof."</p>
+                        <p style="font-weight: 800; font-family: var(--font-display); text-transform: uppercase;">— Michael T.</p>
+                    </div>
+                    <!-- Review 2 -->
+                    <div style="background-color: var(--color-white); border: var(--border-thick); box-shadow: 4px 4px 0px 0px var(--color-dark); padding: 2rem;">
+                        <div style="font-size: 1.2rem; color: #f59e0b; margin-bottom: 1rem;">★★★★★</div>
+                        <p style="font-family: var(--font-body); font-style: italic; margin-bottom: 1rem; line-height: 1.6;">"Best workout in Hamden. It's not just cardio kickboxing where you flail around—you actually learn real boxing techniques. The community is super welcoming too."</p>
+                        <p style="font-weight: 800; font-family: var(--font-display); text-transform: uppercase;">— Sarah L.</p>
+                    </div>
+                    <!-- Review 3 -->
+                    <div style="background-color: var(--color-white); border: var(--border-thick); box-shadow: 4px 4px 0px 0px var(--color-dark); padding: 2rem;">
+                        <div style="font-size: 1.2rem; color: #f59e0b; margin-bottom: 1rem;">★★★★★</div>
+                        <p style="font-family: var(--font-body); font-style: italic; margin-bottom: 1rem; line-height: 1.6;">"I've trained at a lot of gyms, but the attention to detail here is unmatched. Whether you want to compete or just get in the best shape of your life, this is the place."</p>
+                        <p style="font-weight: 800; font-family: var(--font-display); text-transform: uppercase;">— David R.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Infinite Marquee -->
         <div class="marquee-wrapper bg-blue text-white">
             <div class="marquee-content">
@@ -748,6 +775,18 @@
                             </div>
                         </div>
                     </div>
+                    </div>
+                </section>
+
+                <!-- Lead Capture (Middle of Funnel) -->
+                <section id="free-training" style="background-color: var(--color-primary); color: var(--color-white); padding: 3rem; margin-bottom: 4rem; text-align: center; border: var(--border-thick); box-shadow: 6px 6px 0px 0px var(--color-dark);">
+                    <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 5vw, 2.5rem); margin-bottom: 1rem; font-weight: 900; text-transform: uppercase;">Not ready to step in the ring yet?</h2>
+                    <p style="font-family: var(--font-body); font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Drop your email below and I'll send you my <strong>Free 18-Min Champion Warm-Up Routine</strong> so you can start practicing at home today.</p>
+                    
+                    <form action="#" method="POST" style="display: flex; gap: 0.5rem; max-width: 500px; margin: 0 auto; flex-wrap: wrap; justify-content: center;" onsubmit="event.preventDefault(); alert('Success! Check your email for the video link.');">
+                        <input type="email" name="email" placeholder="Enter your email address..." required style="flex: 1; min-width: 250px; padding: 1rem; border: 2px solid var(--color-dark); font-family: var(--font-body); font-size: 1rem;">
+                        <button type="submit" class="btn btn-secondary" style="border: 2px solid var(--color-dark); white-space: nowrap;">SEND MY VIDEO</button>
+                    </form>
                 </section>
 
                 <!-- FAQ Section -->
