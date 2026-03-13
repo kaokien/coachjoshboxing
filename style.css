@@ -170,12 +170,11 @@ ul {
     background-color: var(--color-bg);
     z-index: -1;
 }
-
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 5rem;
+    padding: 1.5rem 0;
 }
 
 .logo {
