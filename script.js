@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // If they clicked the map wrapper specifically, we need to handle the redirect manually
     // because we disabled pointer-events on the iframe to track the click
     if (this === mapWrapper) {
-      window.open("https://maps.app.goo.gl/tkJkRVJnFdmE6RPu6", "_blank");
+      window.open("https://www.google.com/maps/place/Bashta's+Martial+Arts/@41.3643197,-72.9242594,16z/data=!4m15!1m8!3m7!1s0x89e7da6ad0d656ad:0x90b90401773d1bca!2s55+Connolly+Pkwy,+Hamden,+CT+06514!3b1!8m2!3d41.3643197!4d-72.919882!16s%2Fg%2F11c5p478g7!3m5!1s0x89e7da26ed3dfac1:0x3ade805ea78054ca!8m2!3d41.3643197!4d-72.919882!16s%2Fg%2F1xg5tqbj?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D", "_blank");
     }
   }
 
