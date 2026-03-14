@@ -19,6 +19,20 @@
   ],
   "rewrites": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?<subdomain>store)\\..*"
+        }
+      ],
+      "destination": "/nogear.html"
+    },
+    {
+      "source": "/nogear",
+      "destination": "/nogear.html"
+    },
+    {
       "source": "/womens",
       "destination": "/womens-only-flyer"
     },
