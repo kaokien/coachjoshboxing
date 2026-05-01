@@ -1061,3 +1061,28 @@ body::after {
 .ng-cart-checkout-btn:hover {
     opacity: 0.8;
 }
+
+
+/* --- Hero Image Slideshow --- */
+#ng-hero-slideshow {
+    position: relative;
+    overflow: hidden;
+}
+.ng-hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 0.1s linear, filter 0.5s ease;
+}
+.ng-hero-slide.active {
+    opacity: 1;
+    position: relative; /* One needs to dictate the height, or the container handles it */
+}
+/* Ensure only the active one dictates height on mobile if the container isn't fixed */
+#ng-hero-slideshow .ng-hero-slide:not(.active) {
+    position: absolute;
+}
