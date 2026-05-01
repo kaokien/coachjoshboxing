@@ -53,6 +53,7 @@
             <a href="#products" class="ng-nav-link ng-nav-link--active">[ARCHIVE]</a>
             <a href="#nfc" class="ng-nav-link">[CTO_SIG]</a>
             <a href="/" class="ng-nav-link">[MAIN SITE]</a>
+            <button id="ng-cart-toggle" class="ng-nav-link" style="background: none; cursor: pointer;">[CART (0)]</button>
         </div>
         <button class="ng-mobile-toggle" id="ng-mobile-toggle">[MENU]</button>
     </nav>
@@ -142,7 +143,7 @@
                         </div>
                         <div class="ng-product-bottom">
                             <span class="ng-product-price">$48</span>
-                            <a href="#" class="ng-product-btn">[ACQUIRE]</a>
+                            <button class="ng-product-btn" data-id="cjb-ng-t01" data-name="Div.01 Sleeveless Tee" data-price="48">[ACQUIRE]</button>
                         </div>
                     </div>
                 </div>
@@ -175,7 +176,7 @@
                         </div>
                         <div class="ng-product-bottom">
                             <span class="ng-product-price">$85</span>
-                            <a href="#" class="ng-product-btn">[ACQUIRE]</a>
+                            <button class="ng-product-btn" data-id="cjb-ng-h01" data-name="Div.01 Heavyweight Hoodie" data-price="85">[ACQUIRE]</button>
                         </div>
                     </div>
                 </div>
@@ -208,7 +209,7 @@
                         </div>
                         <div class="ng-product-bottom">
                             <span class="ng-product-price">$55</span>
-                            <a href="#" class="ng-product-btn">[ACQUIRE]</a>
+                            <button class="ng-product-btn" data-id="cjb-ng-s01" data-name="Div.01 Training Shorts" data-price="55">[ACQUIRE]</button>
                         </div>
                     </div>
                 </div>
@@ -323,8 +324,36 @@
         </div>
     </div>
 
-    <!-- Custom Cursor -->
-    <div class="ng-cursor-follower" id="ng-cursor-follower"></div>
+    <!-- Cart Drawer UI -->
+    <div class="ng-cart-overlay" id="ng-cart-overlay"></div>
+    <div class="ng-cart-drawer" id="ng-cart-drawer">
+        <div class="ng-cart-header">
+            <span class="ng-cart-title">CART</span>
+            <button class="ng-cart-close" id="ng-cart-close">[CLOSE]</button>
+        </div>
+        <div class="ng-cart-body" id="ng-cart-items">
+            <!-- Cart items injected here -->
+            <div class="ng-cart-empty">CART IS EMPTY</div>
+        </div>
+        <div class="ng-cart-footer">
+            <div class="ng-cart-total-row">
+                <span>SUBTOTAL</span>
+                <span id="ng-cart-total">$0</span>
+            </div>
+            <button class="ng-cart-checkout-btn" id="ng-cart-checkout">[CHECKOUT]</button>
+        </div>
+    </div>
+
+    <!-- Dummy Checkout Success Modal -->
+    <div class="ng-modal-overlay" id="ng-success-modal">
+        <div class="ng-modal" style="text-align: center; border: var(--ng-border-heavy);">
+            <div class="ng-modal-body" style="padding: 3rem;">
+                <h3 style="font-family: var(--ng-font-impact); font-size: 2rem; margin-bottom: 1rem; color: var(--ng-orange);">SYSTEM: ORDER RECEIVED</h3>
+                <p style="font-size: 0.8rem; color: var(--ng-gray-light); letter-spacing: 0.1em; text-transform: uppercase;">Awaiting CTO fulfillment. Check your datalog (email) for confirmation.</p>
+                <button class="ng-modal-close" id="ng-success-close" style="margin-top: 2rem; background: var(--ng-text); color: var(--ng-bg); padding: 0.5rem 1rem; border: none;">[ACKNOWLEDGE]</button>
+            </div>
+        </div>
+    </div>
 
     <script src="nogear.js"></script>
 </body>

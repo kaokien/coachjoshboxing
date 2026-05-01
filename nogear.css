@@ -856,35 +856,7 @@ body::after {
    ANIMATIONS & UI UPGRADES (SMOOTH/EASED)
    ============================================ */
 
-/* --- Custom Cursor --- */
-body {
-    cursor: none !important; /* Hide default cursor */
-}
 
-a, button, .ng-product-btn, .ng-nav-link {
-    cursor: none !important;
-}
-
-.ng-cursor-follower {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    border: 1px solid var(--ng-orange);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 10001;
-    transform: translate(-50%, -50%);
-    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
-    mix-blend-mode: difference;
-}
-
-.ng-cursor-follower.hovering {
-    width: 40px;
-    height: 40px;
-    background-color: rgba(107, 112, 92, 0.2); /* ng-orange faded */
-}
 
 /* --- Smooth Scroll Reveals --- */
 .ng-reveal-hidden {
@@ -963,3 +935,129 @@ a, button, .ng-product-btn, .ng-nav-link {
     opacity: 0.5;
 }
 
+
+
+/* --- CART DRAWER UI --- */
+.ng-cart-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+.ng-cart-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.ng-cart-drawer {
+    position: fixed;
+    top: 0; right: 0; bottom: 0;
+    width: 400px;
+    max-width: 100vw;
+    background-color: var(--ng-bg);
+    border-left: var(--ng-border-heavy);
+    z-index: 10000;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+}
+.ng-cart-drawer.open {
+    transform: translateX(0);
+}
+
+.ng-cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: var(--ng-border-heavy);
+}
+.ng-cart-title {
+    font-family: var(--ng-font-impact);
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+}
+.ng-cart-close {
+    background: none; border: none;
+    font-size: 0.7rem; font-weight: 700;
+    letter-spacing: 0.15em; color: var(--ng-gray-light);
+}
+
+.ng-cart-body {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.ng-cart-empty {
+    font-size: 0.8rem;
+    color: var(--ng-gray-light);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.ng-cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: var(--ng-border);
+}
+.ng-cart-item-name {
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.ng-cart-item-price {
+    font-family: var(--ng-font-impact);
+    font-size: 1.1rem;
+}
+.ng-cart-item-remove {
+    background: none; border: none;
+    font-size: 0.6rem; color: var(--ng-orange);
+    text-transform: uppercase; letter-spacing: 0.1em;
+    margin-top: 0.2rem; display: block;
+}
+
+.ng-cart-footer {
+    padding: 1.5rem;
+    border-top: var(--ng-border-heavy);
+    background-color: var(--ng-gray);
+}
+.ng-cart-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+.ng-cart-total-row span:last-child {
+    font-family: var(--ng-font-impact);
+    font-size: 1.5rem;
+}
+.ng-cart-checkout-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--ng-text);
+    color: var(--ng-bg);
+    font-family: var(--ng-font-impact);
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    border: none;
+    transition: opacity 0.2s;
+}
+.ng-cart-checkout-btn:hover {
+    opacity: 0.8;
+}

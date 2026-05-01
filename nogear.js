@@ -86,24 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.setAttribute('data-text', rawText);
     });
 
-    // --- 2. Custom Mechanical Cursor ---
-    const cursor = document.getElementById('ng-cursor-follower');
-    if (cursor) {
-        document.addEventListener('mousemove', (e) => {
-            // Smoothly move cursor
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-
-        // Hover states for cursor
-        const interactables = document.querySelectorAll('a, button, .ng-product-card, .ng-nav-link');
-        interactables.forEach(el => {
-            el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
-            el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
-        });
-    }
-
-    // --- 3. Smooth Scroll Reveals (Intersection Observer) ---
+    // --- 2. Smooth Scroll Reveals (Intersection Observer) ---
     const revealElements = document.querySelectorAll('.ng-reveal-hidden');
     const revealOptions = {
         threshold: 0.1,
@@ -146,6 +129,107 @@ document.addEventListener('DOMContentLoaded', () => {
             ticking = true;
         }
     });
+
+    // --- CART SYSTEM LOGIC ---
+    let cart = [];
+    const cartToggleBtn = document.getElementById('ng-cart-toggle');
+    const cartDrawer = document.getElementById('ng-cart-drawer');
+    const cartOverlay = document.getElementById('ng-cart-overlay');
+    const cartCloseBtn = document.getElementById('ng-cart-close');
+    const cartItemsContainer = document.getElementById('ng-cart-items');
+    const cartTotalDisplay = document.getElementById('ng-cart-total');
+    const checkoutBtn = document.getElementById('ng-cart-checkout');
+    
+    // Success Modal
+    const successModal = document.getElementById('ng-success-modal');
+    const successClose = document.getElementById('ng-success-close');
+
+    function toggleCart() {
+        cartDrawer.classList.toggle('open');
+        cartOverlay.classList.toggle('open');
+    }
+
+    if (cartToggleBtn) cartToggleBtn.addEventListener('click', toggleCart);
+    if (cartCloseBtn) cartCloseBtn.addEventListener('click', toggleCart);
+    if (cartOverlay) {
+        cartOverlay.addEventListener('click', (e) => {
+            if (e.target === cartOverlay) toggleCart();
+        });
+    }
+
+    function updateCartUI() {
+        if (cart.length === 0) {
+            cartItemsContainer.innerHTML = '<div class="ng-cart-empty">CART IS EMPTY</div>';
+            cartTotalDisplay.textContent = '$0';
+            cartToggleBtn.textContent = '[CART (0)]';
+            return;
+        }
+
+        let total = 0;
+        cartItemsContainer.innerHTML = '';
+        
+        cart.forEach((item, index) => {
+            total += item.price;
+            
+            const itemEl = document.createElement('div');
+            itemEl.className = 'ng-cart-item';
+            itemEl.innerHTML = `
+                <div>
+                    <div class="ng-cart-item-name">${item.name}</div>
+                    <button class="ng-cart-item-remove" data-index="${index}">REMOVE</button>
+                </div>
+                <div class="ng-cart-item-price">$${item.price}</div>
+            `;
+            cartItemsContainer.appendChild(itemEl);
+        });
+
+        cartTotalDisplay.textContent = `$${total}`;
+        cartToggleBtn.textContent = `[CART (${cart.length})]`;
+
+        // Bind remove buttons
+        document.querySelectorAll('.ng-cart-item-remove').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const idx = parseInt(e.target.getAttribute('data-index'));
+                cart.splice(idx, 1);
+                updateCartUI();
+            });
+        });
+    }
+
+    // Add to Cart
+    const acquireBtns = document.querySelectorAll('.ng-product-btn');
+    acquireBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const name = btn.getAttribute('data-name');
+            const price = parseInt(btn.getAttribute('data-price'));
+            if (name && price) {
+                cart.push({ name, price });
+                updateCartUI();
+                if (!cartDrawer.classList.contains('open')) {
+                    toggleCart();
+                }
+            }
+        });
+    });
+
+    // Checkout 
+    if (checkoutBtn) {
+        checkoutBtn.addEventListener('click', () => {
+            if (cart.length === 0) return;
+            // Dummy checkout success
+            toggleCart(); // close cart
+            cart = []; // clear cart
+            updateCartUI();
+            successModal.classList.add('open');
+        });
+    }
+
+    if (successClose) {
+        successClose.addEventListener('click', () => {
+            successModal.classList.remove('open');
+        });
+    }
 
 });
 
