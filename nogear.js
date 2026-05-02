@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (cart.length === 0) {
             cartItemsContainer.innerHTML = '<div class="ng-cart-empty">CART IS EMPTY</div>';
             cartTotalDisplay.textContent = '$0';
-            cartToggleBtn.textContent = '[CART (0)]';
+            cartToggleBtn.textContent = '[ 0 ]';
             return;
         }
 
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         cartTotalDisplay.textContent = `$${total}`;
-        cartToggleBtn.textContent = `[CART (${cart.length})]`;
+        cartToggleBtn.textContent = `[ ${cart.length} ]`;
 
         // Bind remove buttons
         document.querySelectorAll('.ng-cart-item-remove').forEach(btn => {

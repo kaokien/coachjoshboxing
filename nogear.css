@@ -246,10 +246,10 @@ body::after {
 
 /* --- HERO SECTION --- */
 .ng-hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 80vh;
-    /* border removed for editorial luxury */
+    height: 80vh;
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem 2rem 5rem 2rem;
 }
 
 .ng-hero-text {
@@ -272,22 +272,18 @@ body::after {
 }
 
 .ng-hero-title {
-    font-family: var(--ng-font-impact);
-    font-size: clamp(5rem, 12vw, 10rem);
-    line-height: 0.85;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    font-weight: 300;
 }
 
 .ng-hero-tagline {
-    font-size: 0.8rem;
-    font-weight: 400;
-    letter-spacing: 0.1em;
+    font-size: 0.85rem;
     color: var(--ng-gray-light);
     max-width: 400px;
-    line-height: 1.7;
-    margin-bottom: 2.5rem;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
 }
 
 .ng-hero-cta {
@@ -343,9 +339,11 @@ body::after {
 
 @media (max-width: 768px) {
     .ng-hero {
-        grid-template-columns: 1fr;
-        min-height: auto;
-    }
+    height: 80vh;
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem 2rem 5rem 2rem;
+}
     .ng-hero-text {
         padding: 3rem 1.5rem;
         border-right: none;
@@ -451,7 +449,7 @@ body::after {
     z-index: 2;
 }
 
-.ng-product-info {
+.ng-product-info-old {
     padding: 1.5rem 1.5rem 2rem;
     display: flex;
     flex-direction: column;
@@ -864,7 +862,7 @@ body::after {
 .ng-reveal-hidden {
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
 .ng-reveal-visible {
@@ -1096,4 +1094,66 @@ body::after {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+
+/* --- MACRO INTRO --- */
+.ng-macro-intro {
+    width: 100%;
+    height: 100vh;
+}
+.ng-macro-intro .ng-hero-image {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* --- PRODUCT META --- */
+.ng-product-meta {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.ng-product-meta-top {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--ng-font-mono);
+    font-size: 0.7rem;
+    color: var(--ng-gray-light);
+}
+.ng-product-name {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+}
+.ng-product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--ng-gray); /* very subtle delineator */
+}
+.ng-product-price {
+    font-family: var(--ng-font-mono);
+}
+
+@media (max-width: 768px) {
+    .ng-product-image-wrap {
+        width: 100vw;
+        margin-left: -1.5rem;
+        aspect-ratio: auto;
+        height: 70vh;
+    }
+    .ng-product-meta {
+        position: sticky;
+        bottom: 0;
+        background-color: var(--ng-bg);
+        z-index: 10;
+        padding: 1rem 1.5rem;
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+        border-top: 1px solid var(--ng-gray);
+    }
 }
