@@ -4,6 +4,28 @@
    ============================================ */
 
 /* --- DESIGN TOKENS --- */
+
+::selection {
+    background: var(--ng-black);
+    color: var(--ng-bg);
+}
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--ng-bg);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--ng-gray);
+}
+*:focus-visible {
+    outline: none;
+    border-bottom: 1px solid var(--ng-black);
+}
+img {
+    image-rendering: high-quality;
+}
+
 :root {
     /* --- NOGEAR Design System : Light Archive --- */
     --ng-bg: #F2EFE9; /* Ecru / Light Beige */
@@ -25,7 +47,29 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
+    
+::selection {
+    background: var(--ng-black);
+    color: var(--ng-bg);
+}
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--ng-bg);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--ng-gray);
+}
+*:focus-visible {
+    outline: none;
+    border-bottom: 1px solid var(--ng-black);
+}
+img {
+    image-rendering: high-quality;
+}
+
+:root {
         /* --- NOGEAR Design System : Dark Archive --- */
         --ng-bg: #000000;
         --ng-text: #FFFFFF;
@@ -97,6 +141,7 @@ button { cursor: pointer; font-family: inherit; }
 
 /* Mechanical Pointer */
 a, button, .ng-product-btn, .ng-nav-link {
+    letter-spacing: 0.15em;
     cursor: crosshair !important;
 }
 ul { list-style: none; }
@@ -177,6 +222,7 @@ body::after {
 }
 
 .ng-nav-link {
+    letter-spacing: 0.15em;
     font-size: 0.7rem;
     font-weight: 500;
     letter-spacing: 0.1em;
@@ -272,8 +318,8 @@ body::after {
 }
 
 .ng-hero-title {
-    font-size: clamp(2rem, 5vw, 4rem);
-    line-height: 1.1;
+    font-size: clamp(1.5rem, 5vw, 4rem);
+    line-height: 0.95;
     margin-bottom: 1rem;
     font-weight: 300;
 }
@@ -370,6 +416,7 @@ body::after {
     letter-spacing: 0.2em;
     text-transform: uppercase;
 }
+.ng-nfc-text .ng-section-title { font-weight: 300; letter-spacing: -0.02em; }
 
 .ng-section-count {
     font-size: 0.65rem;
@@ -539,7 +586,7 @@ body::after {
 }
 
 .ng-spec-cell {
-    padding: 1.25rem 1.5rem;
+    padding: 0.75rem 1rem;
     /* border removed for editorial luxury */
     /* border removed for editorial luxury */
 }
@@ -704,7 +751,7 @@ body::after {
     background-color: var(--ng-bg);
     padding: 1rem 0;
     width: 100%;
-    opacity: 0.5;
+    opacity: 0.25;
 }
 
 .ng-marquee-track {
@@ -872,7 +919,7 @@ body::after {
 
 /* --- Silent Hover Effects --- */
 .ng-hero-cta, .ng-product-btn {
-    transition: opacity 0.5s ease;
+    transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1);
     text-decoration: underline;
     text-decoration-color: transparent;
 }
@@ -899,7 +946,7 @@ body::after {
     background-size: 100% 4px;
     z-index: 2;
     pointer-events: none;
-    opacity: 0.5;
+    opacity: 0.25;
 }
 
 
@@ -913,7 +960,7 @@ body::after {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(8px) saturate(0%);
 }
 .ng-cart-overlay.open {
     opacity: 1;
@@ -1156,4 +1203,11 @@ body::after {
         margin-right: -1.5rem;
         border-top: 1px solid var(--ng-gray);
     }
+}
+
+.ng-footer a {
+    transition: opacity 0.3s ease;
+}
+.ng-footer a:hover {
+    opacity: 0.5;
 }

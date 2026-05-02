@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateCartUI() {
         if (cart.length === 0) {
-            cartItemsContainer.innerHTML = '<div class="ng-cart-empty">CART IS EMPTY</div>';
+            cartItemsContainer.innerHTML = '<div class="ng-cart-empty">NO UNITS ACQUIRED.</div>';
             cartTotalDisplay.textContent = '$0';
             cartToggleBtn.textContent = '[ 0 ]';
             return;
@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
             slides[currentSlide].classList.remove('active');
             currentSlide = (currentSlide + 1) % slides.length;
             slides[currentSlide].classList.add('active');
-        }, 3500);
+        }, 4500);
     }
 
 });
