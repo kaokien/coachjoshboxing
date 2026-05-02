@@ -1,9 +1,61 @@
-<!DOCTYPE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CJB_ARCHIVE // NOGEAR</title>
+    <link rel="stylesheet" href="nogear.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <div class="ng-top-banner">
+        <span>1 // HAMDEN_CT</span>
+        <span>SYSTEM_STATUS: OPERATIONAL</span>
+    </div>
+
+    <nav class="ng-nav">
+        <a href="/nogear" class="ng-nav-brand">CJB NOGEAR</a>
+        <div class="ng-nav-links" id="ng-nav-links">
+            <a href="#products" class="ng-nav-link ng-nav-link--active">[ARCHIVE]</a>
+            <a href="#nfc" class="ng-nav-link">[CTO_SIG]</a>
+            <a href="/" class="ng-nav-link">[MAIN SITE]</a>
+        </div>
+        <button id="ng-cart-toggle" class="ng-nav-link" style="background: none; cursor: pointer; border: none; font-family: inherit;">[ 0 ]</button>
+    </nav>
+
+    <main>
+        <!-- 01_MANIFESTO -->
+        <section class="ng-hero">
+            <div class="ng-hero-text ng-reveal-hidden">
+                <h1 class="ng-hero-title">UNIT_01 : ENGINEERED BRUTALISM</h1>
+                <p class="ng-hero-tagline">
+                    Archival equipment. 14oz French terry. Woven NFC authentication. Devoid of excess.
+                </p>
+            </div>
+        </section>
+
+        <!-- 02_MACRO (Visual Intro) -->
+        <section class="ng-macro-intro">
+            <div class="ng-hero-image" id="ng-hero-slideshow">
+                <img src="IMG_3449.JPG" alt="CJB NOGEAR Div.01 Sleeveless Tee" class="ng-hero-slide active">
+                <img src="IMG_3451.JPG" alt="NOGEAR Div.01 Heavyweight Hoodie" class="ng-hero-slide">
+                <img src="IMG_3450.JPG" alt="NOGEAR Div.01 Training Shorts" class="ng-hero-slide">
+            </div>
+        </section>
+
+        <!-- NFC Section -->
+        <section class="ng-nfc" id="nfc">
+            <div class="ng-nfc-text ng-reveal-hidden">
+                <h2 class="ng-section-title">INTEGRATION</h2>
+                <p>
+                    Integrated NFC Protocol. CTO Authenticated. Scanning the woven signature unlocks the encrypted training datalog. No marketing, pure utility.
+                </p>
+            </div>
+        </section>
 
         <!-- 03_EXHIBITION -->
         <section class="ng-products" id="products">
             <div class="ng-products-grid">
-
                 <!-- Exhibit A: Hoodie -->
                 <div class="ng-product-card ng-reveal-hidden">
                     <div class="ng-product-image-wrap">
@@ -57,116 +109,48 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
+    </main>
 
-<footer class="ng-footer">
-        <span class="ng-footer-text">© 2026 CJB_ARCHIVE // HAMDEN_CT // ALL RIGHTS RESERVED</span>
-        <a href="/" class="ng-footer-link">← MAIN SITE</a>
-    </footer>
-
-    <!-- NFC Info Modal -->
-    <div class="ng-modal-overlay" id="ng-nfc-modal">
-        <div class="ng-modal">
-            <div class="ng-modal-header">
-                <span class="ng-modal-title">NFC Technology</span>
-                <button class="ng-modal-close" id="ng-nfc-close">[CLOSE]</button>
-            </div>
-            <div class="ng-modal-body">
-                <p>
-                    Each NOGEAR garment ships with a <strong>woven NFC-enabled label</strong> embedded in the nape of
-                    the neck. Compatible with all modern smartphones.
-                </p>
-                <p>
-                    <strong>How it works:</strong> Hold your phone near the label. Your browser will open a private,
-                    token-gated page with exclusive Coach Josh training content — technique videos, round-by-round
-                    breakdowns, curated playlists, and first access to future drops.
-                </p>
-                <p>
-                    This is the bridge between the gear and the tech. The CTO's signature on every unit.
-                </p>
-            </div>
+    <!-- Marquee Divider -->
+    <div class="ng-marquee">
+        <div class="ng-marquee-track">
+            <span class="ng-marquee-item">NOGEAR</span>
+            <span class="ng-marquee-item">•</span>
+            <span class="ng-marquee-item">HEAVYWEIGHT</span>
+            <span class="ng-marquee-item">•</span>
+            <span class="ng-marquee-item">ENGINEERED</span>
+            <span class="ng-marquee-item">•</span>
+            <span class="ng-marquee-item">BRUTALISM</span>
+            <span class="ng-marquee-item">•</span>
+            <span class="ng-marquee-item">ARCHIVE</span>
+            <span class="ng-marquee-item">•</span>
         </div>
     </div>
 
-    <!-- Marquee Divider -->
-        <div class="ng-marquee">
-            <div class="ng-marquee-track">
-                <span class="ng-marquee-item">NOGEAR</span>
-                <span class="ng-marquee-item">•</span>
-                <span class="ng-marquee-item">HEAVYWEIGHT</span>
-                <span class="ng-marquee-item">•</span>
-                <span class="ng-marquee-item">ENGINEERED</span>
-                <span class="ng-marquee-item">•</span>
-                <span class="ng-marquee-item">BRUTALISM</span>
-                <span class="ng-marquee-item">•</span>
-                <span class="ng-marquee-item">ARCHIVE</span>
-                <span class="ng-marquee-item">•</span>
-                <span class="ng-marquee-item">NOGEAR</span>
-                <span class="ng-marquee-item">•</span>
-                <span class="ng-marquee-item">HEAVYWEIGHT</span>
-                <span class="ng-marquee-item">•</span>
-                <span class="ng-marquee-item">ENGINEERED</span>
-                <span class="ng-marquee-item">•</span>
-                <span class="ng-marquee-item">BRUTALISM</span>
-                <span class="ng-marquee-item">•</span>
-                <span class="ng-marquee-item">ARCHIVE</span>
-                <span class="ng-marquee-item">•</span>
-            </div>
+    <!-- Spec Sheet Section -->
+    <section class="ng-specsheet">
+        <div class="ng-spec-grid ng-reveal-hidden">
+            <div class="ng-spec-cell">CTO_SIGNATURE</div>
+            <div class="ng-spec-cell">WOVEN NFC SECURE PROTOCOL</div>
+            <div class="ng-spec-cell">FABRIC_WEIGHT</div>
+            <div class="ng-spec-cell">14.0 OZ FRENCH TERRY</div>
+            <div class="ng-spec-cell">MANUFACTURING</div>
+            <div class="ng-spec-cell">ENGINEERED BRUTALISM</div>
+            <div class="ng-spec-cell">STATUS</div>
+            <div class="ng-spec-cell">ARCHIVAL // DIV.01</div>
         </div>
+    </section>
 
-        <!-- Products Section -->
-        <section id="products" class="ng-products">
-            <div class="ng-section-header">
-                <h2 class="ng-section-title">Product Archive</h2>
-                <span class="ng-section-count">03 Units</span>
-            </div>
-
-            <div class="ng-product-grid">
-
-                <!-- Product 1: Div.01 Sleeveless Tee -->
-                <div class="ng-product-card ng-reveal-hidden">
-                    <div class="ng-product-image-wrap">
-                        <span class="ng-product-model">CJB-NG-T01</span>
-                        <img src="IMG_3449.JPG" alt="NOGEAR Div.01 Sleeveless Tee">
-                    </div>
-                    <div class="ng-product-info">
-                        <h3 class="ng-product-name">Div.01 Sleeveless Tee</h3>
-                        <div class="ng-product-specs">
-                            <div class="ng-product-spec-line">
-                                <span>Weight</span>
-                                <span>7.5 oz</span>
-                            </div>
-                            <div class="ng-product-spec-line">
-                                <span>Material</span>
-                                <span>100% Cotton</span>
-                            </div>
-                            <div class="ng-product-spec-line">
-                                <span>Fit</span>
-                                <span>Sleeveless / Boxy</span>
-                            </div>
-                            <div class="ng-product-spec-line">
-                                <span>Finish</span>
-                                <span>Ecru Wash / Charcoal Print</span>
-                            </div>
-                        </div>
-                        <div class="ng-product-bottom">
-                            <span class="ng-product-price">$48</span>
-                            <button class="ng-product-btn" data-id="cjb-ng-t01" data-name="Div.01 Sleeveless Tee" data-price="48">[ACQUIRE]</button>
-                        </div>
-                    </div>
-                </div>
-
-    
-    <footer class="ng-footer" style="padding: 3rem 2rem; text-align: right; font-family: var(--ng-font-mono); font-size: 0.7rem; color: var(--ng-gray-light); letter-spacing: 0.1em; border-top: 1px solid var(--ng-gray);">
+    <footer class="ng-footer" style="padding: 3rem 2rem; text-align: right; font-family: var(--ng-font-mono); font-size: 0.7rem; color: var(--ng-gray-light); letter-spacing: 0.1em; border-top: 1px solid rgba(0,0,0,0.1);">
         <a href="#" style="color: inherit; text-decoration: none; margin: 0 0.5rem;">INDEX_DATA</a> // 
         <a href="#" style="color: inherit; text-decoration: none; margin: 0 0.5rem;">SIZING_GUIDE</a> // 
         <a href="#" style="color: inherit; text-decoration: none; margin: 0 0.5rem;">SECURE_CHECKOUT</a>
+        <div style="margin-top: 2rem; opacity: 0.5;">© 2026 CJB_ARCHIVE // HAMDEN_CT // ALL RIGHTS RESERVED</div>
     </footer>
 
     <!-- Cart Drawer UI -->
-
     <div class="ng-cart-overlay" id="ng-cart-overlay"></div>
     <div class="ng-cart-drawer" id="ng-cart-drawer">
         <div class="ng-cart-header">
@@ -180,7 +164,7 @@
         <div class="ng-cart-footer">
             <div class="ng-cart-total-row">
                 <span>SUBTOTAL</span>
-                <span id="ng-cart-total">$0</span>
+                <span id="ng-cart-total">0</span>
             </div>
             
             <button class="ng-cart-checkout-btn" id="ng-cart-checkout">[CHECKOUT]</button>
@@ -188,22 +172,20 @@
                 DATA_SECURE // APPLE PAY ENABLED<br>
                 SHIPS WITHIN 24HRS // CT_HQ
             </div>
-
         </div>
     </div>
 
     <!-- Dummy Checkout Success Modal -->
     <div class="ng-modal-overlay" id="ng-success-modal">
-        <div class="ng-modal" style="text-align: right; border: var(--ng-border-heavy);">
+        <div class="ng-modal" style="text-align: right;">
             <div class="ng-modal-body" style="padding: 3rem;">
-                <h3 style="font-family: var(--ng-font-impact); font-size: 2rem; margin-bottom: 1rem; color: var(--ng-orange);">SYSTEM: ORDER RECEIVED</h3>
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">SYSTEM: ORDER RECEIVED</h3>
                 <p style="font-size: 0.8rem; color: var(--ng-gray-light); letter-spacing: 0.1em; text-transform: uppercase;">Awaiting CTO fulfillment. Check your datalog (email) for confirmation.</p>
-                <button class="ng-modal-close" id="ng-success-close" style="margin-top: 2rem; background: var(--ng-text); color: var(--ng-bg); padding: 0.5rem 1rem; border: none;">[ACKNOWLEDGE]</button>
+                <button class="ng-modal-close" id="ng-success-close" style="margin-top: 2rem; background: var(--ng-text); color: var(--ng-bg); padding: 0.5rem 1rem; border: none; cursor: pointer;">[ACKNOWLEDGE]</button>
             </div>
         </div>
     </div>
 
     <script src="nogear.js"></script>
 </body>
-
 </html>
