@@ -293,10 +293,10 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
     border-top: 1px solid rgba(43, 43, 43, 0.08);
 }
 .ng-product-price {
-    font-family: var(--ng-font-mono);
-    font-size: 1rem;
+    font-family: var(--ng-font-display);
+    font-size: 1.8rem;
     font-weight: 400;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
 }
 .ng-product-btn {
     font-family: var(--ng-font-mono);
