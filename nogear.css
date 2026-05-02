@@ -1144,14 +1144,14 @@ body::after {
         width: 100vw;
         margin-left: -1.5rem;
         aspect-ratio: auto;
-        height: 70vh;
+        height: 80vh;
     }
     .ng-product-meta {
         position: sticky;
         bottom: 0;
         background-color: var(--ng-bg);
         z-index: 10;
-        padding: 1rem 1.5rem;
+        padding: 0.5rem 1.5rem;
         margin-left: -1.5rem;
         margin-right: -1.5rem;
         border-top: 1px solid var(--ng-gray);
